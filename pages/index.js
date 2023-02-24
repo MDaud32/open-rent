@@ -1,4 +1,4 @@
-import { Box, Button, Container, Stack } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
@@ -25,6 +25,17 @@ export default function Home() {
           <RightContent />
         </Stack>
       </Container>
+      <Button
+        sx={{
+          bgcolor: "#468CC8",
+          width: "100%",
+          color: "white",
+          fontSize: "1rem",
+          mt: 1,
+          display: { xs: "block", sm: "none" },
+        }}>
+        Message Landlord or Request Viewing
+      </Button>
       <Footer />
     </Box>
   );

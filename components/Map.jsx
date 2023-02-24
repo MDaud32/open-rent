@@ -21,7 +21,7 @@ function Map() {
         width: { xs: "100%", lg: "700px" },
         my: 8,
         bgcolor: "white",
-        padding: 4,
+        padding: { xs: 0, sm: 4 },
         border: "1px solid #DFDFDF",
       }}>
       <MapContainer

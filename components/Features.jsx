@@ -76,7 +76,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Deposit
                 </Typography>
                 <Typography
@@ -94,7 +94,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Rent PCM
                 </Typography>
                 <Typography
@@ -113,7 +113,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Bills Included
                 </Typography>
                 <Typography
@@ -131,7 +131,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Broadband
                 </Typography>
                 <Typography
@@ -173,7 +173,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Student Friendly
                 </Typography>
                 <Typography
@@ -191,7 +191,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Families Allowed
                 </Typography>
                 <Typography
@@ -210,7 +210,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Pets Allowed
                 </Typography>
                 <Typography
@@ -228,7 +228,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Smokers Allowed
                 </Typography>
                 <Typography
@@ -250,7 +250,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   DSS Income Accepted
                 </Typography>
                 <Typography
@@ -303,7 +303,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Available From
                 </Typography>
                 <Typography
@@ -321,7 +321,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Minimum Tenancy
                 </Typography>
                 <Typography
@@ -363,7 +363,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Garden
                 </Typography>
                 <Typography
@@ -381,7 +381,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Parking
                 </Typography>
                 <Typography
@@ -400,7 +400,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Fireplace
                 </Typography>
                 <Typography
@@ -418,7 +418,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   Furnishing
                 </Typography>
                 <Typography
@@ -440,7 +440,7 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 700, color: "#808080", fontSize: "20px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "17px" }}>
                   EPC Rating
                 </Typography>
                 <Typography

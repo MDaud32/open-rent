@@ -74,7 +74,6 @@ function Navbar(props) {
               edge="start"
               onClick={handleDrawerToggle}
               sx={{
-                mr: 2,
                 display: { sm: "none" },
                 color: "#999999",
               }}>
@@ -82,11 +81,7 @@ function Navbar(props) {
             </IconButton>
             <IconButton
               color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
               sx={{
-                mr: 2,
                 display: { sm: "none" },
                 color: "#999999",
                 borderRight: 1,
@@ -99,9 +94,6 @@ function Navbar(props) {
             </IconButton>
             <IconButton
               color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
               sx={{
                 mr: 2,
                 display: { sm: "none" },

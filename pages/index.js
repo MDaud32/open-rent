@@ -6,6 +6,7 @@ import LeftContent from "../components/LeftContent";
 import Navbar from "../components/Navbar";
 import RightContent from "../components/RightContent";
 import TopBanner from "../components/TopBanner";
+import DetailPage from "./DetailPage";
 
 export default function Home() {
   return (
@@ -16,26 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Container>
-        <TopBanner />
-        <Stack
-          direction={{ xs: "column", sm: "column", md: "column", lg: "row" }}
-          sx={{ gap: 2 }}>
-          <LeftContent />
-          <RightContent />
-        </Stack>
-      </Container>
-      <Button
-        sx={{
-          bgcolor: "#468CC8",
-          width: "100%",
-          color: "white",
-          fontSize: "1rem",
-          mt: 1,
-          display: { xs: "block", sm: "none" },
-        }}>
-        Message Landlord or Request Viewing
-      </Button>
+      <DetailPage />
       <Footer />
     </Box>
   );

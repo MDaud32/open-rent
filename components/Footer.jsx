@@ -17,7 +17,7 @@ function Footer() {
         display: { xs: "none", lg: "block" },
       }}>
       <Container maxWidth="lg">
-        <Typography align="start" color="#808080">
+        <Typography sx={{ alignitems: "start" }} color="#808080">
           © 2012 - 2023 OpenRent Ltd.
         </Typography>
         <Stack direction="row" gap={2}>

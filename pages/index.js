@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
       <Container>
         <TopBanner />
-        <Stack direction={{ xs: "column", sm: "row" }}>
+        <Stack direction={{ xs: "column", sm: "column", md: 'column', lg: 'row' }} sx={{ gap: 2 }}>
           <LeftContent />
           <RightContent />
         </Stack>

@@ -4,7 +4,7 @@ import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 
 const Pricing = () => {
   return (
-    <Stack sx={{ mt: "2rem" }} sx={{display: {xs: 'none', lg: 'block'}}}>
+    <Stack sx={{ display: { xs: "none", lg: "block", mt: "2rem" } }}>
       {/* features */}
       <Typography
         sx={{

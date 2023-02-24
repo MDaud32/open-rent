@@ -33,7 +33,7 @@ const Features = () => {
         direction="column"
         sx={{
           bgcolor: "white",
-          width: { xs:'100%', md: 700 },
+          width: { xs: "100%", md: 700 },
           borderRadius: "5px",
           borderTopLeftRadius: "0px",
           border: "1px solid",
@@ -268,7 +268,9 @@ const Features = () => {
         </Stack>
 
         {/* second row */}
-        <Stack direction={{ xs: "column", sm: "row" }} sx={{ mt: "3rem" }}>
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          sx={{ mt: { md: "3rem" } }}>
           {/* first box */}
           <Stack
             width={{ xs: "100%", sm: "50%" }}
@@ -310,7 +312,7 @@ const Features = () => {
                   Today
                 </Typography>
               </Stack>
-              {/* 2nd row */}
+              {/* 2nd line */}
               <Stack
                 direction="row"
                 sx={{

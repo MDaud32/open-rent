@@ -1,11 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { CacheProvider } from '@emotion/react';
-import { ThemeProvider, CssBaseline } from '@mui/material';
+import React from "react";
+import PropTypes from "prop-types";
+import { CacheProvider } from "@emotion/react";
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import "leaflet/dist/leaflet.css";
 
-import createEmotionCache from '../utility/createEmotionCache';
-import lightTheme from '../styles/theme/lightTheme';
-import '../styles/globals.css';
+import createEmotionCache from "../utility/createEmotionCache";
+import lightTheme from "../styles/theme/lightTheme";
+import "../styles/globals.css";
 
 const clientSideEmotionCache = createEmotionCache();
 

@@ -6,10 +6,11 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import BathtubIcon from "@mui/icons-material/Bathtub";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import Features from "./Features"
+import Features from "./Features";
 import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
+import dynamic from "next/dynamic";
 
-
+const Map = dynamic(() => import("./Map"), { ssr: false });
 const LeftContent = () => {
   return (
     <Box>
@@ -20,60 +21,61 @@ const LeftContent = () => {
         height={500}
         style={{ borderRadius: "5px" }}
       />
-       <Stack sx={{ mt: "2rem" }} sx={{display: {xs: 'block', lg: 'none'}}}>
-      {/* features */}
-      <Typography
-        sx={{
-          bgcolor: "white",
-          borderTop: 3,
-          width: 130,
-          padding: "5px",
-
-          borderLeft: "1px solid",
-          borderRight: "1px solid",
-          borderLeftColor: "#DFDFDF",
-          borderRightColor: "#DFDFDF",
-          borderTopColor: "#468CC8",
-          mb: "-1px",
-          zIndex: 2,
-          position: "relative",
-          fllexDirection: "row",
-          fontSize: "18px",
-        }}>
-        <IconButton sx={{ ":hover": { bgcolor: "white" } }}>
-          <StarRateOutlinedIcon />
-        </IconButton>
-        Favourite
-      </Typography>
-
-      {/* group */}
-      <Stack
-        direction="column"
-        sx={{
-          bgcolor: "white",
-          width: { xs: '100%', md: 700, lg: 350, },
-          borderRadius: "5px",
-          borderTopLeftRadius: "0px",
-          border: "1px solid",
-          borderColor: "#DFDFDF",
-          padding: "1rem",
-          mr: 3,
-          alignItems: "center",
-        }}>
-        <Typography sx={{ fontSize: "25px" }}>£1,100.00</Typography>
-        <Typography sx={{ fontSize: "15px" }}>per month</Typography>
+      <Stack sx={{ display: { xs: "block", lg: "none" }, mt: "2rem" }}>
+        {/* features */}
         <Typography
-          sx={{ fontSize: "20px", marginTop: "1rem", fontWeight: 200 }}>
-          £253.85
+          sx={{
+            bgcolor: "white",
+            borderTop: 3,
+            width: 130,
+            padding: "5px",
+
+            borderLeft: "1px solid",
+            borderRight: "1px solid",
+            borderLeftColor: "#DFDFDF",
+            borderRightColor: "#DFDFDF",
+            borderTopColor: "#468CC8",
+            mb: "-1px",
+            zIndex: 2,
+            position: "relative",
+            fllexDirection: "row",
+            fontSize: "18px",
+          }}>
+          <IconButton sx={{ ":hover": { bgcolor: "white" } }}>
+            <StarRateOutlinedIcon />
+          </IconButton>
+          Favourite
         </Typography>
-        <Typography sx={{ fontSize: "15px" }}>per week</Typography>
-        <Typography sx={{ fontSize: "15px", mt: "1rem" }}>
-          ✔️ No admin fees
-        </Typography>
-        <Typography sx={{ fontSize: "15px" }}>✔️ No hidden charges</Typography>
-        
+
+        {/* group */}
+        <Stack
+          direction="column"
+          sx={{
+            bgcolor: "white",
+            width: { xs: "100%", md: 700, lg: 350 },
+            borderRadius: "5px",
+            borderTopLeftRadius: "0px",
+            border: "1px solid",
+            borderColor: "#DFDFDF",
+            padding: "1rem",
+            mr: 3,
+            alignItems: "center",
+          }}>
+          <Typography sx={{ fontSize: "25px" }}>£1,100.00</Typography>
+          <Typography sx={{ fontSize: "15px" }}>per month</Typography>
+          <Typography
+            sx={{ fontSize: "20px", marginTop: "1rem", fontWeight: 200 }}>
+            £253.85
+          </Typography>
+          <Typography sx={{ fontSize: "15px" }}>per week</Typography>
+          <Typography sx={{ fontSize: "15px", mt: "1rem" }}>
+            ✔️ No admin fees
+          </Typography>
+          <Typography sx={{ fontSize: "15px" }}>
+            ✔️ No hidden charges
+          </Typography>
+        </Stack>
       </Stack>
-    </Stack>
       <Box>
         <Typography
           component="h1"
@@ -87,7 +89,7 @@ const LeftContent = () => {
             border: "1px solid",
             borderColor: "#DFDFDF",
             padding: "1rem",
-            width: { xs: '100%', md: 700 },
+            width: { xs: "100%", md: 700 },
           }}>
           <Typography component="h1" sx={{ fontWeight: 300, fontSize: "2rem" }}>
             Overview
@@ -288,6 +290,7 @@ const LeftContent = () => {
           </Box>
         </Box>
         <Features />
+        <Map />
       </Box>
     </Box>
   );

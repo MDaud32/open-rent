@@ -35,7 +35,6 @@ const RightContent = () => {
             borderColor: "#DFDFDF",
             padding: "1rem",
             alignItems: "center",
-            mt: 2,
           }}>
           <Typography sx={{ fontSize: "25px", fontWeight: 200 }}>
             Meet the landlord

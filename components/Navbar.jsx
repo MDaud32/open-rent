@@ -17,8 +17,8 @@ import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import QuestionMarkOutlinedIcon from "@mui/icons-material/QuestionMarkOutlined";
-import Image from "next/image";
-import HouseIcon from "@mui/icons-material/House";
+import About from "./About";
+import ServicesMenu from "./ServicesMenu";
 
 const drawerWidth = 240;
 const navItems = ["About", "Pricing & Services", "Add Listing", "Log In"];
@@ -143,13 +143,15 @@ function Navbar(props) {
             OpenRent
           </Button>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            {/* about */}
             <Button
               sx={{ color: "#40586D", fontSize: "17px", fontWeight: 300 }}>
-              About
+              <About />
             </Button>
+
             <Button
               sx={{ color: "#40586D", fontSize: "17px", fontWeight: 300 }}>
-              Pricing & Services
+              <ServicesMenu />
             </Button>
             <Button
               sx={{

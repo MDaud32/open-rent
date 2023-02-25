@@ -9,6 +9,7 @@ const TopBanner = () => {
         padding: "1rem",
         borderRadius: "5px",
         mt: "1rem",
+        mb: { xs: 0, lg: 2 },
       }}>
       <Typography
         varient="v6"

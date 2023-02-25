@@ -9,13 +9,11 @@ import {
 import Image from "next/image";
 import React from "react";
 import Bg from "../public/bg.jpeg";
-import HotelIcon from "@mui/icons-material/Hotel";
-import BathtubIcon from "@mui/icons-material/Bathtub";
-import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 import Features from "./Features";
 import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 import dynamic from "next/dynamic";
+import OverView from "./OverView";
 
 const Map = dynamic(() => import("./Map"), { ssr: false });
 const LeftContent = () => {
@@ -34,7 +32,7 @@ const LeftContent = () => {
         1 Bed Flat, Bootham Square, YO30
       </Typography>
       <Stack
-        sx={{ display: { xs: "block", lg: "none" }, mt: "2rem", mb: "10px" }}>
+        sx={{ display: { xs: "block", lg: "none" }, mt: "0.5rem", mb: "10px" }}>
         {/* features */}
         <Typography
           sx={{
@@ -78,11 +76,11 @@ const LeftContent = () => {
           <Typography sx={{ fontSize: "25px" }}>£1,100.00</Typography>
           <Typography sx={{ fontSize: "15px" }}>per month</Typography>
           <Typography
-            sx={{ fontSize: "20px", marginTop: "1rem", fontWeight: 200 }}>
+            sx={{ fontSize: "20px", marginTop: "0.5rem", fontWeight: 200 }}>
             £253.85
           </Typography>
           <Typography sx={{ fontSize: "15px" }}>per week</Typography>
-          <Typography sx={{ fontSize: "15px", mt: "1rem" }}>
+          <Typography sx={{ fontSize: "15px", mt: "0.5rem" }}>
             ✔️ No admin fees
           </Typography>
           <Typography sx={{ fontSize: "15px" }}>
@@ -100,149 +98,24 @@ const LeftContent = () => {
             padding: "1rem",
             width: { xs: "100%", md: 700 },
           }}>
-          <Typography component="h1" sx={{ fontWeight: 300, fontSize: "2rem" }}>
+          <Typography
+            component="h1"
+            sx={{ fontWeight: 300, fontSize: "2rem", color: "#9A9A9D" }}>
             Overview
           </Typography>
 
           {/* main box for house overview  */}
-          <Box sx={{ alignItems: "start", textAlign: "start" }}>
-            {/* 1st group */}
-            <Stack
-              direction={{ xs: "column", sm: "row" }}
-              sx={{
-                justifyContent: "space-around",
-                backgroundColor: { xs: "white", sm: "#FAFAFA" },
-                alignItems: "center",
-                textAlign: "center",
-              }}>
-              {/* bedrooms */}
-              <Stack
-                sx={{
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                }}>
-                <IconButton
-                  sx={{
-                    gap: 1,
-                    fontSize: "20px",
-                    alignItems: "center",
-                    textAlign: "start",
-                    ":hover": { backgroundColor: "#FAFAFA" },
-                  }}>
-                  <HotelIcon sx={{ fontSize: "25px" }} />
-                  BedRooms:
-                </IconButton>
-                <Typography
-                  component="h1"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: "20px",
-                    ml: { xs: "0px", sm: "60px" },
-                    color: "#737373",
-                  }}>
-                  1
-                </Typography>
-              </Stack>
-              {/* bathrooms */}
-              <Stack
-                sx={{
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                }}>
-                <IconButton
-                  sx={{
-                    gap: 1,
-                    fontSize: "20px",
-                    alignItems: "center",
-                    ":hover": { backgroundColor: "#FAFAFA" },
-                  }}>
-                  <BathtubIcon sx={{ fontSize: "25px" }} />
-                  Bathrooms:
-                </IconButton>
-                <Typography
-                  component="h1"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: "20px",
-                    ml: { xs: "0px", sm: "30px" },
-                    color: "#737373",
-                  }}>
-                  1
-                </Typography>
-              </Stack>
-            </Stack>
-            {/* 2nd group */}
-            <Stack
-              direction={{ xs: "column", sm: "row" }}
-              sx={{
-                justifyContent: "space-around",
-                alignItems: "center",
-                textAlign: "center",
-              }}>
-              {/* Tenants */}
-              <Stack
-                sx={{
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                }}>
-                <IconButton
-                  sx={{
-                    gap: 1,
-                    fontSize: "20px",
-                    alignItems: "center",
-                    ":hover": { backgroundColor: "#FAFAFA" },
-                  }}>
-                  <FamilyRestroomIcon sx={{ fontSize: "25px" }} />
-                  Maximum Tenants:
-                </IconButton>
-                <Typography
-                  component="h1"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: "20px",
-                    color: "#737373",
-                  }}>
-                  2
-                </Typography>
-              </Stack>
-              {/* Location */}
-              <Stack
-                sx={{
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                }}>
-                <IconButton
-                  sx={{
-                    gap: 1,
-                    fontSize: "20px",
-                    alignItems: "center",
-                    ":hover": { backgroundColor: "#FAFAFA" },
-                  }}>
-                  <LocationOnIcon sx={{ fontSize: "25px" }} />
-                  Location:
-                </IconButton>
-                <Typography
-                  component="h1"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: "20px",
-                    ml: "30px",
-                    color: "#737373",
-                  }}>
-                  York
-                </Typography>
-              </Stack>
-            </Stack>
-          </Box>
+          <OverView />
           {/* description */}
           <Box>
             <Typography
               component="h1"
-              sx={{ fontWeight: 300, fontSize: "2rem", my: 1 }}>
+              sx={{
+                fontWeight: 300,
+                fontSize: "2rem",
+                my: 1,
+                color: "#9A9A9D",
+              }}>
               Description
             </Typography>
             <Divider />

@@ -19,7 +19,7 @@ function Map() {
       sx={{
         height: "400px",
         width: { xs: "100%", lg: "700px" },
-        my: 8,
+        my: 4,
         bgcolor: "white",
         padding: { xs: 0, sm: 4 },
         border: "1px solid #DFDFDF",

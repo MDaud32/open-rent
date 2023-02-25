@@ -8,12 +8,18 @@ const TopBanner = () => {
         backgroundColor: "#fcf8e3",
         padding: "1rem",
         borderRadius: "5px",
-        my: "2rem",
+        mt: "1rem",
       }}>
-      <Typography varient="v6" component="p" sx={{ fontWeight: 600 }}>
+      <Typography
+        varient="v6"
+        component="p"
+        sx={{ fontWeight: 600, color: "#8A6D3B" }}>
         Let Agreed - This property is no longer available for rent
       </Typography>
-      <Typography varient="v6" component="p" sx={{ fontWeight: 300 }}>
+      <Typography
+        varient="v6"
+        component="p"
+        sx={{ fontWeight: 300, color: "#8A6D3B" }}>
         This property has now been taken off the market (as of 12 February
         2023).
       </Typography>

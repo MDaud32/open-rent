@@ -1,4 +1,11 @@
-import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Bg from "../public/bg.jpeg";
@@ -21,7 +28,13 @@ const LeftContent = () => {
         height={500}
         style={{ borderRadius: "5px" }}
       />
-      <Stack sx={{ display: { xs: "block", lg: "none" }, mt: "2rem" }}>
+      <Typography
+        component="h1"
+        sx={{ fontWeight: 300, fontSize: { xs: "1.8rem", sm: "2rem" } }}>
+        1 Bed Flat, Bootham Square, YO30
+      </Typography>
+      <Stack
+        sx={{ display: { xs: "block", lg: "none" }, mt: "2rem", mb: "10px" }}>
         {/* features */}
         <Typography
           sx={{
@@ -40,6 +53,7 @@ const LeftContent = () => {
             position: "relative",
             fllexDirection: "row",
             fontSize: "18px",
+            display: { xs: "none", lg: "block" },
           }}>
           <IconButton sx={{ ":hover": { bgcolor: "white" } }}>
             <StarRateOutlinedIcon />
@@ -77,11 +91,6 @@ const LeftContent = () => {
         </Stack>
       </Stack>
       <Box>
-        <Typography
-          component="h1"
-          sx={{ fontWeight: 300, fontSize: { xs: "1rem", sm: "2rem" } }}>
-          1 Bed Flat, Bootham Square, YO30
-        </Typography>
         <Box
           sx={{
             backgroundColor: "white",
@@ -244,10 +253,16 @@ const LeftContent = () => {
                 borderRadius: "5px",
                 my: "1rem",
               }}>
-              <Typography varient="v6" component="p" sx={{ fontWeight: 600 }}>
+              <Typography
+                varient="v6"
+                component="p"
+                sx={{ fontWeight: 600, color: "#8A6D3B" }}>
                 Note: This OpenRent Property Is No Longer Available For Rent.
               </Typography>
-              <Typography varient="v6" component="p" sx={{ fontWeight: 300 }}>
+              <Typography
+                varient="v6"
+                component="p"
+                sx={{ fontWeight: 300, color: "#8A6D3B" }}>
                 Description below is only for reference, and you can no longer
                 book a viewing or contact this private landlord.
               </Typography>
@@ -291,6 +306,63 @@ const LeftContent = () => {
         </Box>
         <Features />
         <Map />
+        <Stack sx={{ display: { xs: "block", lg: "none", mt: "rem" } }}>
+          {/* features */}
+          <Typography
+            sx={{
+              bgcolor: "white",
+              borderTop: 3,
+              width: 130,
+              padding: "5px",
+              borderLeft: "1px solid",
+              borderRight: "1px solid",
+              borderLeftColor: "#DFDFDF",
+              borderRightColor: "#DFDFDF",
+              borderTopColor: "#468CC8",
+              mb: "-1px",
+              zIndex: 2,
+              position: "relative",
+              fllexDirection: "row",
+              fontSize: "18px",
+            }}>
+            <IconButton sx={{ ":hover": { bgcolor: "white" } }}>
+              <StarRateOutlinedIcon />
+            </IconButton>
+            Favourite
+          </Typography>
+
+          {/* group */}
+          <Stack
+            direction="column"
+            sx={{
+              bgcolor: "white",
+              width: { xs: "100%", md: 700, lg: 350 },
+              borderRadius: "5px",
+              borderTopLeftRadius: "0px",
+              border: "1px solid",
+              borderColor: "#DFDFDF",
+              padding: "1rem",
+              mr: 3,
+              alignItems: "center",
+            }}>
+            <Button
+              disabled
+              sx={{
+                bgcolor: "#D7EDD7",
+                color: "white",
+                width: "100%",
+                mt: "2rem",
+              }}>
+              Let Agreed
+            </Button>
+            <Typography sx={{ fontWeight: 700, fontSize: "17px", mt: "1rem" }}>
+              Property Reference:
+            </Typography>
+            <Typography sx={{ fontWeight: 300, fontSize: "15px" }}>
+              1616107
+            </Typography>
+          </Stack>
+        </Stack>
       </Box>
     </Box>
   );

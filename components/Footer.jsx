@@ -54,7 +54,7 @@ function Footer() {
         </Stack>
         <Typography
           variant="subtitle1"
-          align="start"
+          alignItems="start"
           color="text.secondary"
           component="p"
           sx={{ mt: 2 }}>

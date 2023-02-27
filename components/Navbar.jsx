@@ -66,7 +66,11 @@ function Navbar(props) {
           borderBottomColor: "#468CC8",
         }}>
         <Toolbar
-          sx={{ justifyContent: { xs: "space-between", md: "space-around" } }}>
+          sx={{
+            justifyContent: { xs: "space-between", md: "space-around" },
+            width: { xs: "100%", md: "80%" },
+            mx: "auto",
+          }}>
           {/* hamburger icons */}
           <Box alignItems={"center"} sx={{ display: { sm: "none" } }}>
             <IconButton

@@ -185,10 +185,7 @@ const MainPage = () => {
             alignItems="center"
             mt={1}
             width={{ lg: 850, sm: 600, md: 600 }}>
-            <Stack
-              direction="row"
-              alignItems="center"
-              textAlign={{ xs: "center", sm: "start" }}>
+            <Stack direction="row" alignItems="center">
               Your search is displaying:
               <Typography color="#4699D5" fontSize={15} ml="3px" mt="2px">
                 63 properties found
@@ -214,7 +211,6 @@ const MainPage = () => {
           <Typography
             color="gray"
             fontSize={{ xs: "10px", md: "15px" }}
-            textAlign={{ xs: "center", md: "start" }}
             mb="4px">
             There are 2 new properties since your last visit 4 days ago.
           </Typography>

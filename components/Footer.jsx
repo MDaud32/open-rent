@@ -4,7 +4,10 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import { Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Footer() {
   return (
@@ -12,55 +15,64 @@ function Footer() {
       component="footer"
       sx={{
         bgcolor: "#D9D9D9",
-        py: 6,
+        py: 4,
         mt: 3,
         display: { xs: "none", lg: "block" },
       }}>
-      <Container maxWidth="lg">
-        <Typography sx={{ alignitems: "start" }} color="#808080">
+      <Container maxWidth="md">
+        <Typography
+          sx={{ alignitems: "start", fontSize: "12px" }}
+          color="#808080">
           © 2012 - 2023 OpenRent Ltd.
         </Typography>
-        <Stack direction="row" gap={2}>
-          <Link href="#" underline="none">
-            Back To Top
-          </Link>
-          <Link href="#" underline="none">
-            Blog
-          </Link>
-          <Link href="#" underline="none">
-            Help Centre
-          </Link>
-          <Link href="#" underline="none">
-            Community
-          </Link>
-          <Link href="#" underline="none">
-            Terms
-          </Link>
-          <Link href="#" underline="none">
-            Privacy
-          </Link>
-          <Link href="#" underline="none">
-            Affiliates
-          </Link>
-          <Link href="#" underline="none">
-            Testimonials
-          </Link>
-          <Link href="#" underline="none">
-            Press
-          </Link>
-          <Link href="#" underline="none">
-            Jobs
-          </Link>
+        <Stack direction="row" justifyContent="space-between">
+          <Stack direction="row" gap={2} fontSize="12px">
+            <Link href="#" underline="none">
+              Back To Top
+            </Link>
+            <Link href="#" underline="none">
+              Blog
+            </Link>
+            <Link href="#" underline="none">
+              Help Centre
+            </Link>
+            <Link href="#" underline="none">
+              Community
+            </Link>
+            <Link href="#" underline="none">
+              Terms
+            </Link>
+            <Link href="#" underline="none">
+              Privacy
+            </Link>
+            <Link href="#" underline="none">
+              Affiliates
+            </Link>
+            <Link href="#" underline="none">
+              Testimonials
+            </Link>
+            <Link href="#" underline="none">
+              Press
+            </Link>
+            <Link href="#" underline="none">
+              Jobs
+            </Link>
+          </Stack>
+          <Stack direction="row" color="#468CC8" gap={1}>
+            <FacebookIcon />
+            <TwitterIcon />
+            <InstagramIcon />
+          </Stack>
         </Stack>
         <Typography
           variant="subtitle1"
           alignItems="start"
           color="text.secondary"
           component="p"
-          sx={{ mt: 2 }}>
+          sx={{ mt: 4, fontSize: "12px" }}>
           Ask Question - Office 34, 67-68 Hatton Garden London, EC1N 8JY
         </Typography>
-        <Stack direction="row" gap={2}>
+        <Stack direction="row" gap={2} fontSize="12px">
           <Link href="#" underline="none">
             Landlords
           </Link>
@@ -78,6 +90,23 @@ function Footer() {
           </Link>
         </Stack>
       </Container>
+      <Box
+        maxWidth="md"
+        position="static"
+        sx={{
+          bgcolor: "#468CC8",
+          padding: "10px 10px",
+          width: 130,
+          ml: "auto",
+          mr: 10,
+          color: "white",
+          textAlign: "center",
+          borderStartStartRadius: "5px",
+          borderTopRightRadius: "5px",
+          mb: "-2rem",
+        }}>
+        Need Help
+      </Box>
     </Box>
   );
 }

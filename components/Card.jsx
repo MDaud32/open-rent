@@ -8,103 +8,104 @@ import Link from "@mui/material/Link";
 
 const CardPage = () => {
   return (
-    <Link href="/DetailPage" underline="none">
+    <Box>
       {data.map((card) => (
-        <Card
-          key={card.id}
-          sx={{
-            maxWidth: { xs: "100%", sm: "94%" },
-            display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            mb: 2,
-          }}>
-          <CardMedia
-            component="img"
-            height="200"
-            sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
-            image={card.image}
-            alt="green iguana"
-          />
-          <CardActionArea
+        <Link href="/DetailPage" underline="none" key={card.id}>
+          <Card
             sx={{
+              maxWidth: { xs: "100%", sm: "94%" },
+              display: "flex",
               flexDirection: { xs: "column", sm: "row" },
+              mb: 2,
             }}>
-            <CardContent>
-              <Box>
-                <Stack direction="row" justifyContent="space-between">
-                  {/* rent and location */}
-                  <Stack
-                    direction="row"
-                    width={{ xs: "100%", sm: "50%" }}
-                    justifyContent="space-between"
-                    alignItems="center">
-                    <Typography
+            <CardMedia
+              component="img"
+              height="200"
+              sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
+              image={card.image}
+              alt="green iguana"
+            />
+            <CardActionArea
+              sx={{
+                flexDirection: { xs: "column", sm: "row" },
+              }}>
+              <CardContent>
+                <Box>
+                  <Stack direction="row" justifyContent="space-between">
+                    {/* rent and location */}
+                    <Stack
+                      direction="row"
+                      width={{ xs: "100%", sm: "50%" }}
+                      justifyContent="space-between"
+                      alignItems="center">
+                      <Typography
+                        sx={{
+                          color: "#6F8CD3",
+                          fontSize: "20px",
+                        }}>
+                        {card.rent}{" "}
+                        <span style={{ color: "black", fontSize: "12px" }}>
+                          Per Month
+                        </span>
+                      </Typography>
+                      <Typography sx={{ color: "#6F8CD3", fontSize: "20px" }}>
+                        {card.location}{" "}
+                        <span style={{ color: "black", fontSize: "12px" }}>
+                          km
+                        </span>
+                      </Typography>
+                    </Stack>
+                    {/* last update time */}
+                    <Box
                       sx={{
-                        color: "#6F8CD3",
-                        fontSize: "20px",
+                        display: { xs: "none", sm: "block" },
+                        alignItems: "center",
                       }}>
-                      {card.rent}{" "}
-                      <span style={{ color: "black", fontSize: "12px" }}>
-                        Per Month
-                      </span>
+                      <Typography fontSize="12px" mt="8px">
+                        {card.lastupdate}
+                      </Typography>
+                    </Box>
+                  </Stack>
+                  <Typography
+                    color="#6F8CD3"
+                    fontSize={{ xs: "15px", md: "20px" }}
+                    fontWeight={300}
+                    mt="4px">
+                    {card.title}
+                  </Typography>
+                  <Typography
+                    fontSize="15px"
+                    mt="0.5rem"
+                    sx={{ display: { xs: "none", sm: "block" } }}>
+                    {card.description}
+                  </Typography>
+                  <Stack direction="row" justifyContent="space-between">
+                    <Typography fontSize="15px" fontWeight={500} mt="8px">
+                      {card.features}
                     </Typography>
-                    <Typography sx={{ color: "#6F8CD3", fontSize: "20px" }}>
-                      {card.location}{" "}
-                      <span style={{ color: "black", fontSize: "12px" }}>
-                        km
-                      </span>
+
+                    <Typography
+                      width="20%"
+                      textAlign="center"
+                      underline="none"
+                      borderRadius="5px"
+                      py="12px"
+                      sx={{
+                        bgcolor: "#5CB85C",
+                        ":hover": { bgcolor: "#5CA05C" },
+                        color: "white",
+                        display: { xs: "none", sm: "block" },
+                      }}>
+                      View Details
                     </Typography>
                   </Stack>
-                  {/* last update time */}
-                  <Box
-                    sx={{
-                      display: { xs: "none", sm: "block" },
-                      alignItems: "center",
-                    }}>
-                    <Typography fontSize="12px" mt="8px">
-                      {card.lastupdate}
-                    </Typography>
-                  </Box>
-                </Stack>
-                <Typography
-                  color="#6F8CD3"
-                  fontSize={{ xs: "15px", md: "20px" }}
-                  fontWeight={300}
-                  mt="4px">
-                  {card.title}
-                </Typography>
-                <Typography
-                  fontSize="15px"
-                  mt="0.5rem"
-                  sx={{ display: { xs: "none", sm: "block" } }}>
-                  {card.description}
-                </Typography>
-                <Stack direction="row" justifyContent="space-between">
-                  <Typography fontSize="15px" fontWeight={500} mt="8px">
-                    {card.features}
-                  </Typography>
-
-                  <Typography
-                    width="20%"
-                    textAlign="center"
-                    underline="none"
-                    borderRadius="5px"
-                    py="12px"
-                    sx={{
-                      bgcolor: "#5CB85C",
-                      ":hover": { bgcolor: "#5CA05C" },
-                      color: "white",
-                      display: { xs: "none", sm: "block" },
-                    }}>
-                    View Details
-                  </Typography>
-                </Stack>
-              </Box>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+                </Box>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
       ))}
-    </Link>
+    </Box>
   );
 };
 

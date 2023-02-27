@@ -105,8 +105,8 @@ function Footer() {
           borderStartStartRadius: "5px",
           borderTopRightRadius: "5px",
           mb: "-2rem",
+          fontSize: "25px",
         }}>
-        <InfoIcon />
         Need Help?
       </Box>
     </Box>

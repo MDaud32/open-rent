@@ -76,11 +76,18 @@ const CardPage = () => {
                   <Typography
                     fontSize="15px"
                     mt="0.5rem"
-                    sx={{ display: { xs: "none", sm: "block" } }}>
+                    sx={{
+                      display: { xs: "none", sm: "block" },
+                      color: "gray",
+                    }}>
                     {card.description}
                   </Typography>
                   <Stack direction="row" justifyContent="space-between">
-                    <Typography fontSize="15px" fontWeight={500} mt="8px">
+                    <Typography
+                      fontSize="15px"
+                      fontWeight={500}
+                      mt="8px"
+                      color="gray">
                       {card.features}
                     </Typography>
 

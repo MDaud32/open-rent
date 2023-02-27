@@ -30,7 +30,7 @@ const LeftContent = () => {
       <CardMedia
         component="img"
         sx={{
-          width: { xs: "100%", sm: 650 },
+          width: { xs: "100%", sm: 600 },
           mr: "auto",
           borderRadius: "5px",
         }}
@@ -79,7 +79,7 @@ const LeftContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 650, lg: 350 },
+            width: { xs: "100%", md: 600, lg: 350 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",
@@ -111,7 +111,7 @@ const LeftContent = () => {
             border: "1px solid",
             borderColor: "#DFDFDF",
             padding: "1rem",
-            width: { xs: "100%", md: 650 },
+            width: { xs: "100%", md: 600 },
           }}>
           <Typography
             component="h1"
@@ -224,7 +224,7 @@ const LeftContent = () => {
             direction="column"
             sx={{
               bgcolor: "white",
-              width: { xs: "100%", md: 700, lg: 350 },
+              width: { xs: "100%", md: 600, lg: 350 },
               borderRadius: "5px",
               borderTopLeftRadius: "0px",
               border: "1px solid",
@@ -243,7 +243,13 @@ const LeftContent = () => {
               }}>
               Let Agreed
             </Button>
-            <Typography sx={{ fontWeight: 700, fontSize: "17px", mt: "1rem" }}>
+            <Typography
+              sx={{
+                fontWeight: 700,
+                fontSize: "17px",
+                mt: "1rem",
+                color: "gray",
+              }}>
               Property Reference:
             </Typography>
             <Typography sx={{ fontWeight: 300, fontSize: "15px" }}>

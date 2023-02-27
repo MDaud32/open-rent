@@ -28,7 +28,7 @@ const RightContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 650, lg: 335 },
+            width: { xs: "100%", md: 600, lg: 300 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",
@@ -36,6 +36,7 @@ const RightContent = () => {
             padding: "1rem",
             alignItems: "center",
             mt: 2,
+            color: "gray",
           }}>
           <Typography sx={{ fontSize: "25px", fontWeight: 200 }}>
             Meet the landlord
@@ -47,11 +48,14 @@ const RightContent = () => {
             height={110}
             style={{ borderRadius: "50%" }}
           />
-          <Typography sx={{ fontSize: "15px" }}>Stephanie B.</Typography>
-          <Typography sx={{ fontSize: "15px", marginTop: "1rem" }}>
+          <Typography sx={{ fontSize: "15px", color: "gray" }}>
+            Stephanie B.
+          </Typography>
+          <Typography
+            sx={{ fontSize: "15px", marginTop: "1rem", color: "gray" }}>
             Response Rate: 100% ★
           </Typography>
-          <Typography sx={{ fontSize: "15px" }}>
+          <Typography sx={{ fontSize: "15px", color: "gray" }}>
             Response Time: Within 2 Days ★
           </Typography>
         </Stack>
@@ -61,7 +65,7 @@ const RightContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 650, lg: 335 },
+            width: { xs: "100%", md: 600, lg: 300 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",

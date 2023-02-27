@@ -33,7 +33,7 @@ const Features = () => {
         direction="column"
         sx={{
           bgcolor: "white",
-          width: { xs: "100%", md: 650 },
+          width: { xs: "100%", md: 600 },
           borderRadius: "5px",
           borderTopLeftRadius: "0px",
           border: "1px solid",
@@ -209,6 +209,7 @@ const Features = () => {
                   justifyContent: "space-between",
                   bgcolor: "#FAFAFA",
                   padding: 1,
+                  alignItems: "center",
                 }}>
                 <Typography
                   component="p"
@@ -217,7 +218,7 @@ const Features = () => {
                 </Typography>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 300, color: "#808080", fontSize: "16px" }}>
+                  sx={{ fontWeight: 300, color: "#808080", fontSize: "12px" }}>
                   ❌
                 </Typography>
               </Stack>
@@ -227,6 +228,7 @@ const Features = () => {
                 sx={{
                   justifyContent: "space-between",
                   padding: 1,
+                  alignItems: "center",
                 }}>
                 <Typography
                   component="p"
@@ -238,7 +240,7 @@ const Features = () => {
                   sx={{
                     fontWeight: 300,
                     color: "#6Faffe",
-                    fontSize: "16px",
+                    fontSize: "12px",
                   }}>
                   ❌
                 </Typography>
@@ -252,14 +254,13 @@ const Features = () => {
                 }}>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 600, color: "#808080", fontSize: "16px" }}>
+                  sx={{ fontWeight: 600, color: "#808080", fontSize: "14px" }}>
                   DSS Income Accepted
                 </Typography>
                 <Typography
                   component="p"
                   sx={{
                     fontWeight: 300,
-                    color: "#6Faffe",
                     fontSize: "16px",
                   }}>
                   ✔
@@ -363,6 +364,7 @@ const Features = () => {
                   justifyContent: "space-between",
                   bgcolor: "#FAFAFA",
                   padding: 1,
+                  alignItems: "center",
                 }}>
                 <Typography
                   component="p"
@@ -371,7 +373,7 @@ const Features = () => {
                 </Typography>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 300, color: "#808080", fontSize: "16px" }}>
+                  sx={{ fontWeight: 300, color: "#808080", fontSize: "12px" }}>
                   ❌
                 </Typography>
               </Stack>
@@ -381,6 +383,7 @@ const Features = () => {
                 sx={{
                   justifyContent: "space-between",
                   padding: 1,
+                  alignItems: "center",
                 }}>
                 <Typography
                   component="p"
@@ -389,7 +392,7 @@ const Features = () => {
                 </Typography>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 300, color: "#808080", fontSize: "16px" }}>
+                  sx={{ fontWeight: 300, color: "#808080", fontSize: "12px" }}>
                   ❌
                 </Typography>
               </Stack>
@@ -400,6 +403,7 @@ const Features = () => {
                   justifyContent: "space-between",
                   bgcolor: "#FAFAFA",
                   padding: 1,
+                  alignItems: "center",
                 }}>
                 <Typography
                   component="p"
@@ -408,7 +412,7 @@ const Features = () => {
                 </Typography>
                 <Typography
                   component="p"
-                  sx={{ fontWeight: 300, color: "#808080", fontSize: "16px" }}>
+                  sx={{ fontWeight: 300, color: "#808080", fontSize: "12px" }}>
                   ❌
                 </Typography>
               </Stack>

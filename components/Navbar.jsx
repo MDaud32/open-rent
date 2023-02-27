@@ -19,6 +19,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import QuestionMarkOutlinedIcon from "@mui/icons-material/QuestionMarkOutlined";
 import About from "./About";
 import ServicesMenu from "./ServicesMenu";
+import { Link } from "@mui/material";
 
 const drawerWidth = 240;
 const navItems = ["About", "Pricing & Services", "Add Listing", "Log In"];
@@ -34,7 +35,7 @@ function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2, color: "#999999" }}>
-        MUI
+        OpenRent
       </Typography>
       <Divider />
       <List>
@@ -124,10 +125,11 @@ function Navbar(props) {
           </Box>
 
           {/* desktop logo */}
-          <Button
+          <Link
+            href="/"
+            underline="none"
             className="btn"
             variant="h6"
-            component="div"
             sx={{
               display: { xs: "none", sm: "block" },
               color: "#999999",
@@ -136,12 +138,13 @@ function Navbar(props) {
               gap: 2,
               alignItems: "center",
               textAlign: "center",
+              cursor: "pointer",
             }}>
             <IconButton>
               <HomeIcon sx={{ fontSize: "25px", marginTop: "-4px" }} />
             </IconButton>
             OpenRent
-          </Button>
+          </Link>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {/* about */}
             <Button

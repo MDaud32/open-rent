@@ -8,7 +8,7 @@ import Link from "@mui/material/Link";
 
 const CardPage = () => {
   return (
-    <Box>
+    <Link href="/DetailPage" underline="none">
       {data.map((card) => (
         <Card
           key={card.id}
@@ -84,8 +84,7 @@ const CardPage = () => {
                     {card.features}
                   </Typography>
 
-                  <Link
-                    href="#"
+                  <Typography
                     width="20%"
                     textAlign="center"
                     underline="none"
@@ -98,14 +97,14 @@ const CardPage = () => {
                       display: { xs: "none", sm: "block" },
                     }}>
                     View Details
-                  </Link>
+                  </Typography>
                 </Stack>
               </Box>
             </CardContent>
           </CardActionArea>
         </Card>
       ))}
-    </Box>
+    </Link>
   );
 };
 

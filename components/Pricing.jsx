@@ -4,7 +4,7 @@ import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 
 const Pricing = () => {
   return (
-    <Stack sx={{ display: { xs: "none", lg: "block", mt: "2rem" } }}>
+    <Stack sx={{ display: { xs: "none", md: "block" } }}>
       {/* features */}
       <Typography
         sx={{
@@ -35,7 +35,7 @@ const Pricing = () => {
         direction="column"
         sx={{
           bgcolor: "white",
-          width: { sm: 335 },
+          width: { sm: 300 },
           borderRadius: "5px",
           borderTopLeftRadius: "0px",
           border: "1px solid",
@@ -44,10 +44,19 @@ const Pricing = () => {
           mr: 3,
           alignItems: "center",
         }}>
-        <Typography sx={{ fontSize: "25px" }}>£1,100.00</Typography>
-        <Typography sx={{ fontSize: "15px" }}>per month</Typography>
+        <Typography sx={{ fontSize: "25px", color: "gray" }}>
+          £1,100.00
+        </Typography>
+        <Typography sx={{ fontSize: "15px", color: "gray" }}>
+          per month
+        </Typography>
         <Typography
-          sx={{ fontSize: "20px", marginTop: "1rem", fontWeight: 200 }}>
+          sx={{
+            fontSize: "20px",
+            marginTop: "1rem",
+            fontWeight: 200,
+            color: "gray",
+          }}>
           £253.85
         </Typography>
         <Typography sx={{ fontSize: "15px" }}>per week</Typography>
@@ -66,7 +75,8 @@ const Pricing = () => {
           }}>
           Let Agreed
         </Button>
-        <Typography sx={{ fontWeight: 700, fontSize: "17px", mt: "1rem" }}>
+        <Typography
+          sx={{ fontWeight: 700, fontSize: "17px", mt: "1rem", color: "gray" }}>
           Property Reference:
         </Typography>
         <Typography sx={{ fontWeight: 300, fontSize: "15px" }}>

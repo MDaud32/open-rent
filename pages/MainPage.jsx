@@ -184,8 +184,11 @@ const MainPage = () => {
             justifyContent="space-between"
             alignItems="center"
             mt={1}
-            width={{ lg: 900, sm: 700, md: "100%" }}>
-            <Stack direction="row" alignItems="center">
+            width={{ lg: 850, sm: 600, md: 600 }}>
+            <Stack
+              direction="row"
+              alignItems="center"
+              textAlign={{ xs: "center", sm: "start" }}>
               Your search is displaying:
               <Typography color="#4699D5" fontSize={15} ml="3px" mt="2px">
                 63 properties found
@@ -203,7 +206,7 @@ const MainPage = () => {
                 bgcolor: "#5CB85C",
                 ":hover": { bgcolor: "#5CA05C" },
                 color: "white",
-                display: { xs: "none", lg: "block" },
+                display: { xs: "none", md: "block" },
               }}>
               Create Email Alert
             </Button>

@@ -34,9 +34,9 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2, color: "#999999" }}>
+      <Link href="/" sx={{ my: 2, color: "#999999" }}>
         OpenRent
-      </Typography>
+      </Link>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -108,20 +108,23 @@ function Navbar(props) {
           </Box>
 
           {/* main logo */}
-          <Box sx={{ display: { xs: "block", sm: "none" } }}>
+          <Box
+            sx={{ display: { xs: "block", sm: "none" }, alignItems: "center" }}>
             <IconButton sx={{ padding: "2px" }}>
               <HomeIcon
-                sx={{ fontSize: "20px", marginTop: "-2px", padding: "0px" }}
+                sx={{ fontSize: "20px", marginTop: "-6px", padding: "0px" }}
               />
             </IconButton>
-            <Button
+            <Link
+              href="/"
+              underline="none"
               sx={{
                 color: "#999999",
                 fontSize: "20px",
                 padding: "0px",
               }}>
               OpenRent
-            </Button>
+            </Link>
           </Box>
 
           {/* desktop logo */}

@@ -8,6 +8,7 @@ import { Button, Stack } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import InfoIcon from "@mui/icons-material/Info";
 
 function Footer() {
   return (
@@ -95,8 +96,8 @@ function Footer() {
         position="static"
         sx={{
           bgcolor: "#468CC8",
-          padding: "10px 10px",
-          width: 130,
+          padding: "13px 10px",
+          width: 200,
           ml: "auto",
           mr: 10,
           color: "white",
@@ -105,7 +106,8 @@ function Footer() {
           borderTopRightRadius: "5px",
           mb: "-2rem",
         }}>
-        Need Help
+        <InfoIcon />
+        Need Help?
       </Box>
     </Box>
   );

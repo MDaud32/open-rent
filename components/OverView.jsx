@@ -23,8 +23,8 @@ const OverView = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
-              width: { xs: "16%", sm: "39%" },
-              ml: { xs: 1, sm: 5 },
+              width: { xs: "18%", sm: "38%" },
+              ml: { xs: "0.2rem", sm: "2.7rem" },
             }}>
             <IconButton
               sx={{
@@ -33,17 +33,20 @@ const OverView = () => {
                 alignItems: "start",
                 ":hover": { backgroundColor: "#FAFAFA" },
               }}>
-              <HotelIcon sx={{ fontSize: "25px" }} />
-              <Typography display={{ xs: "none", sm: "block" }}>
-                BedRooms:
+              <HotelIcon sx={{ fontSize: "20px", color: "#808080" }} />
+              <Typography
+                display={{ xs: "none", sm: "block" }}
+                fontWeight={"300"}
+                color={"#8f8f8f"}>
+                Bedrooms:
               </Typography>
             </IconButton>
             <Typography
               component="h1"
               sx={{
-                fontWeight: 600,
-                fontSize: "20px",
-                color: "#737373",
+                fontWeight: 900,
+                fontSize: "16px",
+                color: "#8f8f8f",
               }}>
               1
             </Typography>
@@ -63,17 +66,20 @@ const OverView = () => {
                 alignItems: "center",
                 ":hover": { backgroundColor: "#FAFAFA" },
               }}>
-              <BathtubIcon sx={{ fontSize: "25px" }} />
-              <Typography display={{ xs: "none", sm: "block" }}>
+              <BathtubIcon sx={{ fontSize: "20px", color: "#808080" }} />
+              <Typography
+                display={{ xs: "none", sm: "block" }}
+                fontWeight={"300"}
+                color={"#8f8f8f"}>
                 Bathrooms:
               </Typography>
             </IconButton>
             <Typography
               component="h1"
               sx={{
-                fontWeight: 600,
-                fontSize: "20px",
-                color: "#737373",
+                fontWeight: 900,
+                fontSize: "16px",
+                color: "#8f8f8f",
               }}>
               1
             </Typography>
@@ -102,17 +108,20 @@ const OverView = () => {
                 alignItems: "center",
                 ":hover": { backgroundColor: "#FAFAFA" },
               }}>
-              <FamilyRestroomIcon sx={{ fontSize: "25px" }} />
-              <Typography display={{ xs: "none", sm: "block" }}>
+              <FamilyRestroomIcon sx={{ fontSize: "20px", color: "#808080" }} />
+              <Typography
+                display={{ xs: "none", sm: "block" }}
+                fontWeight={"300"}
+                color={"#8f8f8f"}>
                 Maximum Tenants:
               </Typography>
             </IconButton>
             <Typography
               component="h1"
               sx={{
-                fontWeight: 600,
-                fontSize: "20px",
-                color: "#737373",
+                fontWeight: 900,
+                fontSize: "16px",
+                color: "#8f8f8f",
               }}>
               2
             </Typography>
@@ -133,17 +142,20 @@ const OverView = () => {
                 alignItems: "center",
                 ":hover": { backgroundColor: "#FAFAFA" },
               }}>
-              <LocationOnIcon sx={{ fontSize: "25px" }} />
-              <Typography display={{ xs: "none", sm: "block" }}>
+              <LocationOnIcon sx={{ fontSize: "20px", color: "#808080" }} />
+              <Typography
+                display={{ xs: "none", sm: "block" }}
+                fontWeight={"300"}
+                color={"#8f8f8f"}>
                 Location:
               </Typography>
             </IconButton>
             <Typography
               component="h1"
               sx={{
-                fontWeight: 600,
-                fontSize: "20px",
-                color: "#737373",
+                fontWeight: 400,
+                fontSize: "16px",
+                color: "#8f8f8f",
               }}>
               York
             </Typography>

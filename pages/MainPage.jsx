@@ -16,6 +16,7 @@ import dynamic from "next/dynamic";
 import SearchIcon from "@mui/icons-material/Search";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import Card from "../components/Card";
+import CardPage from "../components/Card";
 
 const MainMap = dynamic(() => import("../components/MainMap"), { ssr: false });
 
@@ -29,12 +30,19 @@ const MainPage = () => {
           component="h1"
           sx={{
             fontWeight: 400,
-            fontSize: { xs: "1.8rem", sm: "25px" },
+            fontSize: { xs: "15px", sm: "25px" },
             color: "#40586D",
             mt: 2,
+            alignItems: "center",
           }}>
           <IconButton>
-            <PushPinIcon />
+            <PushPinIcon
+              sx={{
+                fontSize: { xs: "15px", sm: "25px" },
+                mt: "-1px",
+                mr: "-4px",
+              }}
+            />
           </IconButton>
           Properties To Rent In York, North Yorkshire
         </Typography>
@@ -68,7 +76,7 @@ const MainPage = () => {
                 size="small"
               />
             </Box>
-            <Stack direction="row" alignItems={"center"}>
+            <Stack direction="row" alignItems="center">
               {/* small input */}
               <Box
                 component="form"
@@ -176,7 +184,7 @@ const MainPage = () => {
             justifyContent="space-between"
             alignItems="center"
             mt={1}
-            width={{ lg: 950, sm: 700, md: "100%" }}>
+            width={{ lg: 900, sm: 700, md: "100%" }}>
             <Stack direction="row" alignItems="center">
               Your search is displaying:
               <Typography color="#4699D5" fontSize={15} ml="3px" mt="2px">
@@ -195,15 +203,20 @@ const MainPage = () => {
                 bgcolor: "#5CB85C",
                 ":hover": { bgcolor: "#5CA05C" },
                 color: "white",
+                display: { xs: "none", lg: "block" },
               }}>
               Create Email Alert
             </Button>
           </Stack>
-          <Typography color="">
+          <Typography
+            color="gray"
+            fontSize={{ xs: "10px", md: "15px" }}
+            textAlign={{ xs: "center", md: "start" }}
+            mb="4px">
             There are 2 new properties since your last visit 4 days ago.
           </Typography>
         </Stack>
-        <Card />
+        <CardPage />
       </Container>
     </Box>
   );

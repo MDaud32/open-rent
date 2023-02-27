@@ -24,7 +24,7 @@ const Pricing = () => {
           fllexDirection: "row",
           fontSize: "18px",
         }}>
-        <IconButton sx={{ ":hover": { bgcolor: "white" } }}>
+        <IconButton sx={{ ":hover": { bgcolor: "white" }, mt: "-6px" }}>
           <StarRateOutlinedIcon />
         </IconButton>
         Favourite
@@ -35,7 +35,7 @@ const Pricing = () => {
         direction="column"
         sx={{
           bgcolor: "white",
-          width: { sm: 350 },
+          width: { sm: 335 },
           borderRadius: "5px",
           borderTopLeftRadius: "0px",
           border: "1px solid",

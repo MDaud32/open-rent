@@ -7,7 +7,7 @@ import TopBanner from "../components/TopBanner";
 const DetailPage = () => {
   return (
     <Box>
-      <Container>
+      <Container sx={{ mx: "auto", width: { lg: "70%" } }}>
         <TopBanner />
         <Stack
           direction={{ xs: "column", sm: "column", md: "column", lg: "row" }}

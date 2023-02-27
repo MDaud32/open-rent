@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  CardMedia,
   Divider,
   IconButton,
   Stack,
@@ -19,12 +20,22 @@ const Map = dynamic(() => import("./Map"), { ssr: false });
 const LeftContent = () => {
   return (
     <Box>
-      <Image
+      {/* <Image
         src={Bg}
         alt="hero image"
         width={700}
         height={450}
         style={{ borderRadius: "5px" }}
+      /> */}
+      <CardMedia
+        component="img"
+        sx={{
+          width: { xs: "100%", sm: 650 },
+          mr: "auto",
+          borderRadius: "5px",
+        }}
+        image="/bg.jpeg"
+        alt="green iguana"
       />
       <Typography
         component="h1"
@@ -68,7 +79,7 @@ const LeftContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 700, lg: 350 },
+            width: { xs: "100%", md: 650, lg: 350 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",
@@ -100,7 +111,7 @@ const LeftContent = () => {
             border: "1px solid",
             borderColor: "#DFDFDF",
             padding: "1rem",
-            width: { xs: "100%", md: 700 },
+            width: { xs: "100%", md: 650 },
           }}>
           <Typography
             component="h1"

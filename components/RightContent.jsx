@@ -28,7 +28,7 @@ const RightContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 700, lg: 350 },
+            width: { xs: "100%", md: 650, lg: 335 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",
@@ -61,7 +61,7 @@ const RightContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 700, lg: 350 },
+            width: { xs: "100%", md: 650, lg: 335 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",
@@ -80,16 +80,16 @@ const RightContent = () => {
               <Image
                 src={facebook}
                 alt="profile image"
-                width={70}
-                height={70}
+                width={50}
+                height={50}
               />
-              <Image src={email} alt="profile image" width={70} height={70} />
-              <Image src={gmail} alt="profile image" width={70} height={70} />
-              <Image src={twitter} alt="profile image" width={70} height={70} />
+              <Image src={email} alt="profile image" width={50} height={50} />
+              <Image src={gmail} alt="profile image" width={50} height={50} />
+              <Image src={twitter} alt="profile image" width={50} height={50} />
             </Stack>
             <Stack direction="row" gap={1}>
-              <Image src={writing} alt="profile image" width={70} height={70} />
-              <Image src={sum} alt="profile image" width={70} height={70} />
+              <Image src={writing} alt="profile image" width={50} height={50} />
+              <Image src={sum} alt="profile image" width={50} height={50} />
             </Stack>
           </Stack>
         </Stack>
@@ -112,13 +112,13 @@ const RightContent = () => {
           Report Listing
         </Button>
       </Stack>
-      <Divider />
+      <Box width={250} sx={{ borderBottom: "1px solid #888888", mx: "auto" }} />
       <Stack
         sx={{
           alignItems: "center",
           textAlign: "center",
           bgcolor: "#AFAFAF",
-          width: 250,
+          width: 180,
           mt: 2,
           borderRadius: 2,
           mx: "auto",
@@ -130,9 +130,8 @@ const RightContent = () => {
         <Typography
           sx={{
             color: "#fff",
-            fontSize: "1.5rem",
-            width: 200,
-            mt: 2,
+            fontSize: "1rem",
+            width: 180,
             borderRadius: "10px",
             fontWeight: 700,
           }}>

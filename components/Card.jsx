@@ -1,44 +1,43 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
-import room1 from "../public/room1.jpeg";
+import { Box, Stack, Typography } from "@mui/material";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import { CardActionArea } from "@mui/material";
+import Link from "@mui/material/Link";
 
-const Card = () => {
+const CardPage = () => {
   return (
-    <Stack>
-      {data.map((card) => {
-        return (
-          <Stack key={card.id} direction={{ xs: "column", md: "row" }} mt={1}>
-            <Box
-              sx={
-                {
-                  // width: { xs: "100%", md: 200 },
-                  // height: { xs: 400, md: 150 },
-                }
-              }>
-              <Image
-                src={room1}
-                alt="card img"
-                style={{
-                  borderTopLeftRadius: "10px",
-                  borderTopRightRadius: "10px",
-                }}
-                className="img1"
-              />
-            </Box>
-            <Box
-              sx={{
-                bgcolor: "white",
-                width: { xs: "100%", md: 700 },
-                padding: 1,
-              }}>
-              <Stack>
+    <Box>
+      {data.map((card) => (
+        <Card
+          key={card.id}
+          sx={{
+            maxWidth: { xs: "100%", sm: "94%" },
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            mb: 2,
+          }}>
+          <CardMedia
+            component="img"
+            height="200"
+            sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
+            image={card.image}
+            alt="green iguana"
+          />
+          <CardActionArea
+            sx={{
+              flexDirection: { xs: "column", sm: "row" },
+            }}>
+            <CardContent>
+              <Box>
                 <Stack direction="row" justifyContent="space-between">
                   {/* rent and location */}
                   <Stack
                     direction="row"
-                    width={{ xs: "100%", md: "50%" }}
-                    justifyContent="space-between">
+                    width={{ xs: "100%", sm: "50%" }}
+                    justifyContent="space-between"
+                    alignItems="center">
                     <Typography
                       sx={{
                         color: "#6F8CD3",
@@ -57,13 +56,19 @@ const Card = () => {
                     </Typography>
                   </Stack>
                   {/* last update time */}
-                  <Box sx={{ display: { xs: "none", md: "block" } }}>
-                    <Typography>{card.lastupdate}</Typography>
+                  <Box
+                    sx={{
+                      display: { xs: "none", sm: "block" },
+                      alignItems: "center",
+                    }}>
+                    <Typography fontSize="12px" mt="8px">
+                      {card.lastupdate}
+                    </Typography>
                   </Box>
                 </Stack>
                 <Typography
                   color="#6F8CD3"
-                  fontSize="20px"
+                  fontSize={{ xs: "15px", md: "20px" }}
                   fontWeight={300}
                   mt="4px">
                   {card.title}
@@ -71,51 +76,106 @@ const Card = () => {
                 <Typography
                   fontSize="15px"
                   mt="0.5rem"
-                  sx={{ display: { xs: "none", md: "block" } }}>
+                  sx={{ display: { xs: "none", sm: "block" } }}>
                   {card.description}
                 </Typography>
                 <Stack direction="row" justifyContent="space-between">
                   <Typography fontSize="15px" fontWeight={500} mt="8px">
                     {card.features}
                   </Typography>
-                  <Button
-                    alignItems="center"
+
+                  <Link
+                    href="#"
+                    width="20%"
                     textAlign="center"
-                    width="40%"
-                    mx="0.5rem"
+                    underline="none"
                     borderRadius="5px"
-                    py="1px"
-                    mb={2}
+                    py="12px"
                     sx={{
                       bgcolor: "#5CB85C",
                       ":hover": { bgcolor: "#5CA05C" },
                       color: "white",
-                      display: { xs: "none", md: "block" },
+                      display: { xs: "none", sm: "block" },
                     }}>
                     View Details
-                  </Button>
+                  </Link>
                 </Stack>
-              </Stack>
-            </Box>
-          </Stack>
-        );
-      })}
-    </Stack>
+              </Box>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      ))}
+    </Box>
   );
 };
 
-export default Card;
+export default CardPage;
 
 const data = [
   {
     id: 1,
-    image: `${room1}`,
+    image: "/room1.jpeg",
     rent: "£1,500",
     location: "0.37",
     lastupdate: "Last Updated around 4 days ago",
     title: "2 Bed Flat, Kings Hudson Quarter, YO1",
     description:
-      "**PRIVATE LANDLORD- NO AGENTS*** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 2,
+    image: "/bg.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 3,
+    image: "/room1.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 4,
+    image: "/bg.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 5,
+    image: "/room1.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 6,
+    image: "/bg.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
 ];

@@ -10,6 +10,7 @@ const TopBanner = () => {
         borderRadius: "5px",
         mt: "1rem",
         mb: { xs: 0, lg: 2 },
+        width: { xs: "auto", lg: 1070 },
       }}>
       <Typography
         varient="v6"

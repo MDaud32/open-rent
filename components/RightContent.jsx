@@ -35,6 +35,7 @@ const RightContent = () => {
             borderColor: "#DFDFDF",
             padding: "1rem",
             alignItems: "center",
+            mt: 2,
           }}>
           <Typography sx={{ fontSize: "25px", fontWeight: 200 }}>
             Meet the landlord
@@ -72,7 +73,9 @@ const RightContent = () => {
           <Typography sx={{ fontSize: "25px", fontWeight: 200 }}>
             Share Property
           </Typography>
-          <Stack direction="column" sx={{ alignItems: "center", gap: 2 }}>
+          <Stack
+            direction={{ xs: "row", sm: "column" }}
+            sx={{ alignItems: "center", gap: 2, mt: 1 }}>
             <Stack direction="row" gap={1}>
               <Image
                 src={facebook}

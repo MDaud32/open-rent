@@ -4,3 +4,14 @@ Button {
 .btn {
   text-transform: unset !important;
 }
+
+img1 {
+  @media only screen and (max-width: 600px) {
+    width: 20px;
+    height: 500px;
+  }
+  @media only screen and (min-width: 1025px) {
+    width: 200px;
+    height: 150px;
+  }
+}

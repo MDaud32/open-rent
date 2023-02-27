@@ -449,6 +449,7 @@ const Features = () => {
                     fontWeight: 400,
                     color: "#6Faffe",
                     fontSize: "20px",
+                    textAlign: "end",
                   }}>
                   Currently Being Obtained
                 </Typography>

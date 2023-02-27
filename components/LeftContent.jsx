@@ -23,12 +23,16 @@ const LeftContent = () => {
         src={Bg}
         alt="hero image"
         width={700}
-        height={500}
+        height={450}
         style={{ borderRadius: "5px" }}
       />
       <Typography
         component="h1"
-        sx={{ fontWeight: 300, fontSize: { xs: "1.8rem", sm: "2rem" } }}>
+        sx={{
+          fontWeight: 400,
+          fontSize: { xs: "1.8rem", sm: "30px" },
+          color: "#40586D",
+        }}>
         1 Bed Flat, Bootham Square, YO30
       </Typography>
       <Stack

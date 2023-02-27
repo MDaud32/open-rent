@@ -22,7 +22,7 @@ const OverView = () => {
             sx={{
               flexDirection: "row",
               justifyContent: "space-between",
-              alignItems: "start",
+              alignItems: "center",
               width: { xs: "16%", sm: "39%" },
               ml: { xs: 1, sm: 5 },
             }}>
@@ -92,7 +92,8 @@ const OverView = () => {
               flexDirection: "row",
               justifyContent: "space-around",
               alignItems: "center",
-              width: { xs: "20%", sm: "50%" },
+              width: { xs: "20%", sm: "48%" },
+              ml: { xs: 0, sm: "12px" },
             }}>
             <IconButton
               sx={{
@@ -123,7 +124,7 @@ const OverView = () => {
               justifyContent: "space-around",
               alignItems: "center",
               width: { xs: "20%", sm: "50%" },
-              ml: { xs: 1, sm: 0 },
+              ml: { xs: 1, sm: "10px" },
             }}>
             <IconButton
               sx={{

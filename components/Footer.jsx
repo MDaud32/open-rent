@@ -91,24 +91,32 @@ function Footer() {
           </Link>
         </Stack>
       </Container>
-      <Box
+      <Button
         maxWidth="md"
-        position="static"
         sx={{
           bgcolor: "#468CC8",
           padding: "13px 10px",
-          width: 200,
+          fontSize: "20px",
+          width: 220,
           ml: "auto",
-          mr: 10,
+          ":hover": {
+            backgroundColor: "rgb(48, 109, 161)",
+          },
           color: "white",
           textAlign: "center",
+          display: "flex",
+          gap: "5px",
+          mr: "30px",
           borderStartStartRadius: "5px",
           borderTopRightRadius: "5px",
           mb: "-2rem",
-          fontSize: "25px",
         }}>
-        Need Help?
-      </Box>
+        <InfoIcon />
+        <Typography fontSize={"18px"} fontWeight={"300"}>
+          {" "}
+          Need Help?
+        </Typography>
+      </Button>
     </Box>
   );
 }

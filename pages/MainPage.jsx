@@ -17,6 +17,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import Card from "../components/Card";
 import CardPage from "../components/Card";
+import MainPageBottomNav from "../components/MainPageBottomNav";
 
 const MainMap = dynamic(() => import("../components/MainMap"), { ssr: false });
 
@@ -217,6 +218,7 @@ const MainPage = () => {
         </Stack>
         <CardPage />
       </Container>
+      <MainPageBottomNav />
     </Box>
   );
 };

@@ -11,12 +11,14 @@ const CardPage = () => {
     <Box>
       {data.map((card) => (
         <Link href="/DetailPage" underline="none" key={card.id}>
-          <Card
+          <Box
             sx={{
               maxWidth: { xs: "100%", sm: "94%" },
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
               mb: 2,
+              backgroundColor : '#ffffff',
+              boxShadow  : '1px 1px 1px 1px #eaeaea'
             }}>
             <CardMedia
               component="img"
@@ -74,20 +76,15 @@ const CardPage = () => {
                     {card.title}
                   </Typography>
                   <Typography
-                    fontSize="15px"
+                    fontSize="14px"
                     mt="0.5rem"
-                    sx={{
-                      display: { xs: "none", sm: "block" },
-                      color: "gray",
-                    }}>
+                    color={'#808080'}
+                    sx={{ display: { xs: "none", sm: "block" } }}>
                     {card.description}
                   </Typography>
                   <Stack direction="row" justifyContent="space-between">
-                    <Typography
-                      fontSize="15px"
-                      fontWeight={500}
-                      mt="8px"
-                      color="gray">
+                    <Typography fontSize="15px" fontWeight={400} mt="8px" color={'#808080'}>
+
                       {card.features}
                     </Typography>
 
@@ -109,7 +106,7 @@ const CardPage = () => {
                 </Box>
               </CardContent>
             </CardActionArea>
-          </Card>
+          </Box>
         </Link>
       ))}
     </Box>
@@ -127,7 +124,7 @@ const data = [
     lastupdate: "Last Updated around 4 days ago",
     title: "2 Bed Flat, Kings Hudson Quarter, YO1",
     description:
-      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
   {
@@ -138,7 +135,7 @@ const data = [
     lastupdate: "Last Updated around 4 days ago",
     title: "2 Bed Flat, Kings Hudson Quarter, YO1",
     description:
-      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
   {
@@ -149,7 +146,7 @@ const data = [
     lastupdate: "Last Updated around 4 days ago",
     title: "2 Bed Flat, Kings Hudson Quarter, YO1",
     description:
-      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
   {
@@ -160,7 +157,7 @@ const data = [
     lastupdate: "Last Updated around 4 days ago",
     title: "2 Bed Flat, Kings Hudson Quarter, YO1",
     description:
-      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
   {
@@ -171,7 +168,7 @@ const data = [
     lastupdate: "Last Updated around 4 days ago",
     title: "2 Bed Flat, Kings Hudson Quarter, YO1",
     description:
-      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
   {
@@ -182,7 +179,7 @@ const data = [
     lastupdate: "Last Updated around 4 days ago",
     title: "2 Bed Flat, Kings Hudson Quarter, YO1",
     description:
-      "*PRIVATE LANDLORD- NO AGENTS** * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
 ];

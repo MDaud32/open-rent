@@ -94,6 +94,10 @@ function Footer() {
       <Button
         maxWidth="md"
         sx={{
+          position: "fixed",
+          bottom: "2px",
+          left: "0px",
+          right: "12px",
           bgcolor: "#468CC8",
           padding: "13px 10px",
           fontSize: "20px",
@@ -109,7 +113,6 @@ function Footer() {
           mr: "30px",
           borderStartStartRadius: "5px",
           borderTopRightRadius: "5px",
-          mb: "-2rem",
         }}>
         <InfoIcon />
         <Typography fontSize={"18px"} fontWeight={"300"}>

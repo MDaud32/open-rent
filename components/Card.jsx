@@ -7,7 +7,8 @@ import { CardActionArea } from "@mui/material";
 import Link from "@mui/material/Link";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import Carousel from "react-material-ui-carousel";
+import { Carousel } from "react-responsive-carousel";
+
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { Paper } from "@mui/material";
@@ -23,16 +24,11 @@ const CardPage = () => {
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             mb: 2,
+            height: { md: 200 },
             backgroundColor: "#ffffff",
             boxShadow: "1px 1px 1px 1px #eaeaea",
           }}>
-          <Carousel
-            NextIcon={<NavigateNextIcon />}
-            PrevIcon={<NavigateBeforeIcon />}
-            autoPlay={false}
-            animation="fade"
-            indicators={false}
-            navButtonsAlwaysVisible={true}>
+          <Carousel>
             {items.map((itemImg) => (
               <Paper key={itemImg.id}>
                 <CardMedia

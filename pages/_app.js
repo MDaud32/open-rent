@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { CacheProvider } from "@emotion/react";
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import "leaflet/dist/leaflet.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import createEmotionCache from "../utility/createEmotionCache";
 import lightTheme from "../styles/theme/lightTheme";

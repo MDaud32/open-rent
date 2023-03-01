@@ -8,7 +8,17 @@ import ViewListIcon from "@mui/icons-material/ViewList";
 import * as React from "react";
 import BasicModal from "./Modal";
 
-const MainPageBottomNav = () => {
+const MainPageBottomNav = ({ setShowCard, setShowMap, showCard, showMap }) => {
+  function cardClickHandler() {
+    setShowCard(true);
+    setShowMap(false);
+  }
+
+  function mapClickHandler() {
+    setShowCard(false);
+    setShowMap(true);
+  }
+
   return (
     <Box
       sx={{
@@ -47,18 +57,19 @@ const MainPageBottomNav = () => {
         </Box>
         <Box sx={{ display: "flex" }}>
           <Button
+            onClick={mapClickHandler}
             sx={{
-              backgroundColor: "#468cc8",
+              backgroundColor: showMap ? "#3272a9" : "#468cc8",
               color: "white",
               width: "10px",
               ":hover": { backgroundColor: "rgb(50, 114, 169)" },
             }}>
             <RoomIcon />
           </Button>
-
           <Button
+            onClick={cardClickHandler}
             sx={{
-              backgroundColor: "#3272a9",
+              backgroundColor: showCard ? "#3272a9" : "#468cc8",
               color: "white",
               ":hover": { backgroundColor: "rgb(50, 114, 169)" },
             }}>

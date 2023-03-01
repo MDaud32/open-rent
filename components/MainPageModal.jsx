@@ -57,8 +57,14 @@ export default function BasicModal() {
     <div>
       <Button
         onClick={handleOpen}
-        sx={{ backgroundColor: "#f0f0f0", color: "gray", height: "100%" }}>
-        <TuneIcon />
+        sx={{
+          bgcolor: "#F0F0F0",
+          color: "#959595",
+          ":hover": { bgcolor: "white" },
+          border: "1px solid #F0F0F0",
+        }}>
+        <TuneIcon sx={{ fontSize: "15px", mt: "-3px", ml: 1 }} />
+        Advanced Filter
       </Button>
       <Modal
         sx={{

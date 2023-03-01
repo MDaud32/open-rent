@@ -1,29 +1,38 @@
-import {
-  Box,
-  Container,
-  Stack,
-  TextField,
-  Typography,
-  InputLabel,
-  MenuItem,
-  Button,
-  Divider,
-  IconButton,
-} from "@mui/material";
-import React, { useRef } from "react";
-import CancelIcon from "@mui/icons-material/Cancel";
+import { Box, Stack, Typography, Button, IconButton } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import SearchIcon from "@mui/icons-material/Search";
 import PushPinIcon from "@mui/icons-material/PushPin";
-import Card from "../components/Card";
 import CardPage from "../components/Card";
 import MainPageBottomNav from "../components/MainPageBottomNav";
-import TuneIcon from "@mui/icons-material/Tune";
 import InputCom from "../components/InputCom";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const MainMap = dynamic(() => import("../components/MainMap"), { ssr: false });
 
 const MainPage = () => {
+  const [showMap, setShowMap] = useState(false);
+  const [showCard, setCard] = useState(true);
+  const theme = useTheme();
+
+  const isMd = useMediaQuery(theme.breakpoints.up("sm"));
+  useEffect(() => {
+    const handleResize = () => {
+      const isSm = window.innerWidth >= theme.breakpoints.values.sm;
+      if (isSm) {
+        setShowMap(true);
+        setCard(true);
+      } else if (isMd) {
+        setShowMap(false);
+        setCard(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [theme.breakpoints.values.sm, isMd]);
+
   return (
     <Box width="100%">
       <Box sx={{ mx: "auto", maxWidth: { md: "md" }, p: 1 }}>
@@ -49,7 +58,7 @@ const MainPage = () => {
         </Typography>
         <Stack direction="row">
           <InputCom />
-          <MainMap />
+          {showMap && <MainMap />}
         </Stack>
         {/* text */}
         <Stack maxWidth="md">
@@ -87,9 +96,14 @@ const MainPage = () => {
             There are 2 new properties since your last visit 4 days ago.
           </Typography>
         </Stack>
-        <CardPage />
+        {showCard && <CardPage />}
       </Box>
-      <MainPageBottomNav />
+      <MainPageBottomNav
+        setShowCard={setCard}
+        showCard={showCard}
+        setShowMap={setShowMap}
+        showMap={showMap}
+      />
     </Box>
   );
 };

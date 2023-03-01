@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import TuneIcon from "@mui/icons-material/Tune";
+import MainPageModal from "./MainPageModal";
 
 const options = [{ value: "Minutes" }, { value: "km" }];
 
@@ -140,16 +141,8 @@ const InputCom = () => {
             ))}
           </TextField>
         </Box>
-        <Button
-          sx={{
-            bgcolor: "#F0F0F0",
-            color: "#959595",
-            ":hover": { bgcolor: "white" },
-            border: "1px solid #F0F0F0",
-          }}>
-          <TuneIcon sx={{ fontSize: "15px", mt: "-3px", ml: 1 }} />
-          Advanced Filter
-        </Button>
+
+        <MainPageModal />
       </Box>
     </div>
   );

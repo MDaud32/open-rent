@@ -16,7 +16,7 @@ import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 import dynamic from "next/dynamic";
 import OverView from "./OverView";
 import CarouselPage from "./Carousel";
-import Carousel from "react-material-ui-carousel";
+import { Carousel } from "react-responsive-carousel";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { Paper } from "@mui/material";

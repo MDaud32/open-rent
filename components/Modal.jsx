@@ -401,13 +401,27 @@ export default function BasicModal() {
                 position: "sticky",
                 bottom: "16px",
                 right: "16px",
+                ":hover": { bgcolor: "#5cb85d" },
               }}>
               Update
             </Button>
-            <Button sx={{ bgcolor: "#EC971F", color: "white", mx: 1 }}>
+            <Button
+              sx={{
+                bgcolor: "#EC971F",
+                color: "white",
+                mx: 1,
+                ":hover": { bgcolor: "#ec972f" },
+              }}>
               Reset
             </Button>
-            <Button sx={{ bgcolor: "#D9534F", color: "white" }}>Cancel</Button>
+            <Button
+              sx={{
+                bgcolor: "#D9534F",
+                color: "white",
+                ":hover": { bgcolor: "#d9535f" },
+              }}>
+              Cancel
+            </Button>
           </Box>
         </Box>
       </Modal>

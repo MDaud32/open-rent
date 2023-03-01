@@ -17,11 +17,11 @@ function Map() {
   return (
     <Box
       sx={{
-        height: "385px",
+        height: "380px",
         width: "650px",
         border: "3px solid #DFDFDF",
         borderRadius: "10px",
-        display: { xs: "none", md: "block" },
+        // display: { xs: "none", md: "block" },
       }}>
       <MapContainer
         center={center}

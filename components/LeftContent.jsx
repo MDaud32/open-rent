@@ -44,7 +44,7 @@ const LeftContent = () => {
         style={{ borderRadius: "5px" }}
       /> */}
       <Carousel
-        NextIcon={<NavigateNextIcon />}
+        sx={{}}
         PrevIcon={<NavigateBeforeIcon />}
         autoPlay={false}
         animation="fade"
@@ -52,11 +52,11 @@ const LeftContent = () => {
         navButtonsAlwaysVisible={true}>
         {items.map((item) => (
           // <Item key={item.id} item={item} />
-          <Paper key={item.id}>
+          <Paper key={item.id} sx={{ bgcolor: "#F5F5F5" }}>
             <CardMedia
               component="img"
               sx={{
-                width: { xs: "100%", sm: 600 },
+                width: { xs: "100%", sm: "100%" },
                 mr: "auto",
                 borderRadius: "5px",
               }}

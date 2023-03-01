@@ -3,12 +3,17 @@ import Head from "next/head";
 import LeftContent from "../components/LeftContent";
 import RightContent from "../components/RightContent";
 import TopBanner from "../components/TopBanner";
+import {useState} from "react";
 
 const DetailPage = () => {
+    const [showBanner,setSowBanner] = useState(true)
   return (
     <Box>
       <Box sx={{ mx: "auto", maxWidth: { md: "md" }, p: 1 }}>
-        <TopBanner />
+          {
+              showBanner &&  <TopBanner setShowBanner={setSowBanner} />
+          }
+
         <Stack
           direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
           sx={{ gap: 2 }}>

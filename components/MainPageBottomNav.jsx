@@ -21,6 +21,7 @@ const MainPageBottomNav = () => {
         backgroundColor: "#ffffff",
         color: "white",
         pb: "6px",
+        zIndex: 10,
 
         display: { xs: "block", sm: "none" },
       }}>

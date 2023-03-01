@@ -16,43 +16,35 @@ const CardPage = () => {
   return (
     <Box>
       {data.map((card) => (
-        <Link href="/DetailPage" underline="none" key={card.id}>
-          <Box
-            sx={{
-              maxWidth: { xs: "100%", sm: "md" },
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              mb: 2,
-              backgroundColor: "#ffffff",
-              boxShadow: "1px 1px 1px 1px #eaeaea",
-            }}>
-            <CardMedia
-              component="img"
-              height="200"
-              sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
-              image={card.image}
-              alt="green iguana"
-            />
+        <Box
+          key={card.id}
+          sx={{
+            maxWidth: { xs: "100%", sm: "md" },
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            mb: 2,
+            backgroundColor: "#ffffff",
+            boxShadow: "1px 1px 1px 1px #eaeaea",
+          }}>
+          <Carousel
+            NextIcon={<NavigateNextIcon />}
+            PrevIcon={<NavigateBeforeIcon />}
+            autoPlay={false}
+            animation="fade"
+            indicators={false}
+            navButtonsAlwaysVisible={true}>
             {items.map((itemImg) => (
-              <Carousel
-                key={itemImg.id}
-                NextIcon={<NavigateNextIcon />}
-                PrevIcon={<NavigateBeforeIcon />}
-                autoPlay={false}
-                animation="fade"
-                indicators={false}
-                navButtonsAlwaysVisible={true}>
-                <Paper>
-                  <CardMedia
-                    image={itemImg.image}
-                    component="img"
-                    height={200}
-                    sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
-                    alt="green iguana"
-                  />
-                </Paper>
-              </Carousel>
+              <Paper key={itemImg.id}>
+                <CardMedia
+                  image={itemImg.image}
+                  component="img"
+                  height={"200"}
+                  sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
+                />
+              </Paper>
             ))}
+          </Carousel>
+          <Link href="/DetailPage" underline="none" key={card.id}>
             <CardActionArea
               sx={{
                 flexDirection: { xs: "column", sm: "row" },
@@ -97,7 +89,9 @@ const CardPage = () => {
                         alignItems: "center",
                       }}>
                       <Typography fontSize="12px" mt="8px" alignItems="center">
-                        <AccessTimeIcon sx={{ fontSize: "15px" }} />
+                        <AccessTimeIcon
+                          sx={{ fontSize: "15px", mb: "-3px", mr: "2px" }}
+                        />
                         {card.lastupdate}
                       </Typography>
                     </Box>
@@ -143,8 +137,8 @@ const CardPage = () => {
                 </Box>
               </CardContent>
             </CardActionArea>
-          </Box>
-        </Link>
+          </Link>
+        </Box>
       ))}
     </Box>
   );
@@ -174,59 +168,59 @@ const data = [
       "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
     features: "2 Beds . 2 Baths . Furnishing at tenant choice",
   },
-  // {
-  //   id: 2,
-  //   image: "/bg.jpeg",
-  //   rent: "£1,500",
-  //   location: "0.37",
-  //   lastupdate: "Last Updated around 4 days ago",
-  //   title: "2 Bed Flat, Kings Hudson Quarter, YO1",
-  //   description:
-  //     "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
-  //   features: "2 Beds . 2 Baths . Furnishing at tenant choice",
-  // },
-  // {
-  //   id: 3,
-  //   image: "/room1.jpeg",
-  //   rent: "£1,500",
-  //   location: "0.37",
-  //   lastupdate: "Last Updated around 4 days ago",
-  //   title: "2 Bed Flat, Kings Hudson Quarter, YO1",
-  //   description:
-  //     "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
-  //   features: "2 Beds . 2 Baths . Furnishing at tenant choice",
-  // },
-  // {
-  //   id: 4,
-  //   image: "/bg.jpeg",
-  //   rent: "£1,500",
-  //   location: "0.37",
-  //   lastupdate: "Last Updated around 4 days ago",
-  //   title: "2 Bed Flat, Kings Hudson Quarter, YO1",
-  //   description:
-  //     "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
-  //   features: "2 Beds . 2 Baths . Furnishing at tenant choice",
-  // },
-  // {
-  //   id: 5,
-  //   image: "/room1.jpeg",
-  //   rent: "£1,500",
-  //   location: "0.37",
-  //   lastupdate: "Last Updated around 4 days ago",
-  //   title: "2 Bed Flat, Kings Hudson Quarter, YO1",
-  //   description:
-  //     "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
-  //   features: "2 Beds . 2 Baths . Furnishing at tenant choice",
-  // },
-  // {
-  //   id: 6,
-  //   image: "/bg.jpeg",
-  //   rent: "£1,500",
-  //   location: "0.37",
-  //   lastupdate: "Last Updated around 4 days ago",
-  //   title: "2 Bed Flat, Kings Hudson Quarter, YO1",
-  //   description:
-  //     "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
-  //   features: "2 Beds . 2 Baths . Furnishing at tenant choice",
-  // },
+  {
+    id: 2,
+    image: "/bg.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 3,
+    image: "/room1.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 4,
+    image: "/bg.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 5,
+    image: "/room1.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
+  {
+    id: 6,
+    image: "/bg.jpeg",
+    rent: "£1,500",
+    location: "0.37",
+    lastupdate: "Last Updated around 4 days ago",
+    title: "2 Bed Flat, Kings Hudson Quarter, YO1",
+    description:
+      "PRIVATE LANDLORD- NO AGENTS* * VIEWING IS HIGHLY RECOMMENDED TO APPRECIATE THE ACCOMMODATION ON OFFER * *Main Features",
+    features: "2 Beds . 2 Baths . Furnishing at tenant choice",
+  },
 ];

@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
+import {CarouselItem} from "react-material-ui-carousel/dist/components/CarouselItem";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { Paper, CardMedia } from "@mui/material";

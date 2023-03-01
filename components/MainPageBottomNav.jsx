@@ -24,7 +24,8 @@ const MainPageBottomNav = ({ setShowCard, setShowMap, showCard, showMap }) => {
       sx={{
         bgcolor: "white",
         width: "100%",
-        paddingX: "8px",
+        paddingX: "10px",
+        paddingY: "4px",
         position: "fixed",
         bottom: "0px",
         left: "0px",
@@ -36,7 +37,7 @@ const MainPageBottomNav = ({ setShowCard, setShowMap, showCard, showMap }) => {
         display: { xs: "block", sm: "none" },
       }}>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", gap: 1 }}>
           <Button
             sx={{
               color: "white",
@@ -55,7 +56,7 @@ const MainPageBottomNav = ({ setShowCard, setShowMap, showCard, showMap }) => {
 
           <BasicModal />
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", gap: 1 }}>
           <Button
             onClick={mapClickHandler}
             sx={{

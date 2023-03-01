@@ -14,9 +14,11 @@ const MainPage = () => {
   const [showMap, setShowMap] = useState(false);
   const [showCard, setCard] = useState(true);
   const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const isMd = useMediaQuery(theme.breakpoints.up("sm"));
   useEffect(() => {
+    setShowMap(true);
+    setCard(true);
     const handleResize = () => {
       const isSm = window.innerWidth >= theme.breakpoints.values.sm;
       if (isSm) {

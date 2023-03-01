@@ -28,7 +28,7 @@ const CardPage = () => {
             backgroundColor: "#ffffff",
             boxShadow: "1px 1px 1px 1px #eaeaea",
           }}>
-          <Carousel>
+          <Carousel showIndicators={false} showThumbs={false}>
             {items.map((itemImg) => (
               <Paper key={itemImg.id}>
                 <CardMedia

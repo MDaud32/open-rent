@@ -34,6 +34,7 @@ const OverView = () => {
                 ":hover": { backgroundColor: "#FAFAFA" },
               }}>
               <HotelIcon sx={{ fontSize: "20px", color: "#808080" }} />
+
               <Typography
                 display={{ xs: "none", sm: "block" }}
                 fontWeight={"300"}

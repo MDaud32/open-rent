@@ -7,15 +7,15 @@ import TopBanner from "../components/TopBanner";
 const DetailPage = () => {
   return (
     <Box>
-      <Container sx={{ mx: "auto", width: { lg: "70%" } }}>
+      <Box sx={{ mx: "auto", maxWidth: { md: "md" }, p: 1 }}>
         <TopBanner />
         <Stack
-          direction={{ xs: "column", sm: "column", md: "column", lg: "row" }}
+          direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
           sx={{ gap: 2 }}>
           <LeftContent />
           <RightContent />
         </Stack>
-      </Container>
+      </Box>
       <Button
         sx={{
           bgcolor: "#468CC8",
@@ -23,7 +23,7 @@ const DetailPage = () => {
           color: "white",
           fontSize: "1rem",
           mt: 1,
-          display: { xs: "block", sm: "none" },
+          display: { xs: "block", md: "none" },
         }}>
         Message Landlord or Request Viewing
       </Button>

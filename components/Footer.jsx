@@ -18,7 +18,7 @@ function Footer() {
         bgcolor: "#D9D9D9",
         py: 4,
         mt: 3,
-        display: { xs: "none", lg: "block" },
+        display: { xs: "none", md: "block" },
       }}>
       <Container maxWidth="md">
         <Typography

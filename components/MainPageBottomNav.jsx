@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import RoomIcon from "@mui/icons-material/Room";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import * as React from "react";
+import BasicModal from "./Modal";
 
 const MainPageBottomNav = () => {
   return (
@@ -41,11 +42,7 @@ const MainPageBottomNav = () => {
             </Typography>
           </Button>
 
-          <Button
-            variant={"solid"}
-            sx={{ backgroundColor: "#f0f0f0", color: "gray" }}>
-            <TuneIcon />
-          </Button>
+          <BasicModal />
         </Box>
         <Box sx={{ display: "flex" }}>
           <Button

@@ -15,6 +15,22 @@ import Features from "./Features";
 import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 import dynamic from "next/dynamic";
 import OverView from "./OverView";
+import CarouselPage from "./Carousel";
+import Carousel from "react-material-ui-carousel";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import { Paper } from "@mui/material";
+
+const items = [
+  {
+    id: 1,
+    image: "/bg.jpeg",
+  },
+  {
+    id: 2,
+    image: "/room1.jpeg",
+  },
+];
 
 const Map = dynamic(() => import("./Map"), { ssr: false });
 const LeftContent = () => {
@@ -27,16 +43,29 @@ const LeftContent = () => {
         height={450}
         style={{ borderRadius: "5px" }}
       /> */}
-      <CardMedia
-        component="img"
-        sx={{
-          width: { xs: "100%", sm: 600 },
-          mr: "auto",
-          borderRadius: "5px",
-        }}
-        image="/bg.jpeg"
-        alt="green iguana"
-      />
+      <Carousel
+        NextIcon={<NavigateNextIcon />}
+        PrevIcon={<NavigateBeforeIcon />}
+        autoPlay={false}
+        animation="fade"
+        indicators={false}
+        navButtonsAlwaysVisible={true}>
+        {items.map((item) => (
+          // <Item key={item.id} item={item} />
+          <Paper key={item.id}>
+            <CardMedia
+              component="img"
+              sx={{
+                width: { xs: "100%", sm: 600 },
+                mr: "auto",
+                borderRadius: "5px",
+              }}
+              image={item.image}
+              alt="green iguana"
+            />
+          </Paper>
+        ))}
+      </Carousel>
       <Typography
         component="h1"
         sx={{
@@ -194,7 +223,7 @@ const LeftContent = () => {
         </Box>
         <Features />
         <Map />
-        <Stack sx={{ display: { xs: "block", lg: "none", mt: "rem" } }}>
+        <Stack sx={{ display: { xs: "block", md: "none" } }}>
           {/* features */}
           <Typography
             sx={{

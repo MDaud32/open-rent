@@ -17,6 +17,7 @@ import twitter from "../public/twitter.png";
 import writing from "../public/writing.png";
 import sum from "../public/sum.png";
 import WarningOutlinedIcon from "@mui/icons-material/WarningOutlined";
+import InfoIcon from "@mui/icons-material/Info";
 
 const RightContent = () => {
   return (
@@ -28,7 +29,7 @@ const RightContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 600, lg: 300 },
+            width: { xs: "100%", md: 250, lg: 300 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",
@@ -53,10 +54,16 @@ const RightContent = () => {
           </Typography>
           <Typography
             sx={{ fontSize: "15px", marginTop: "1rem", color: "gray" }}>
-            Response Rate: 100% ★
+            Response Rate: 100%{" "}
+            <IconButton>
+              <InfoIcon sx={{ fontSize: "15px" }} />
+            </IconButton>
           </Typography>
           <Typography sx={{ fontSize: "15px", color: "gray" }}>
-            Response Time: Within 2 Days ★
+            Response Time: Within 2 Days{" "}
+            <IconButton>
+              <InfoIcon sx={{ fontSize: "15px" }} />
+            </IconButton>
           </Typography>
         </Stack>
 
@@ -65,7 +72,7 @@ const RightContent = () => {
           direction="column"
           sx={{
             bgcolor: "white",
-            width: { xs: "100%", md: 600, lg: 300 },
+            width: { xs: "100%", md: 250, lg: 300 },
             borderRadius: "5px",
             borderTopLeftRadius: "0px",
             border: "1px solid",

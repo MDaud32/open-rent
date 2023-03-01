@@ -35,7 +35,7 @@ const Pricing = () => {
         direction="column"
         sx={{
           bgcolor: "white",
-          width: { sm: 300 },
+          width: { sm: 300, md: 250, lg: 300 },
           borderRadius: "5px",
           borderTopLeftRadius: "0px",
           border: "1px solid",

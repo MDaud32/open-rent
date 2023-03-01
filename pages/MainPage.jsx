@@ -18,6 +18,7 @@ import PushPinIcon from "@mui/icons-material/PushPin";
 import Card from "../components/Card";
 import CardPage from "../components/Card";
 import MainPageBottomNav from "../components/MainPageBottomNav";
+import TuneIcon from "@mui/icons-material/Tune";
 
 const MainMap = dynamic(() => import("../components/MainMap"), { ssr: false });
 
@@ -26,7 +27,7 @@ const options = [{ value: "Minutes" }, { value: "km" }];
 const MainPage = () => {
   return (
     <Box width="100%">
-      <Container sx={{ mx: "auto", width: { lg: "70%" } }}>
+      <Box sx={{ mx: "auto", maxWidth: { md: "md" }, p: 1 }}>
         <Typography
           component="h1"
           sx={{
@@ -57,7 +58,7 @@ const MainPage = () => {
               borderBottomLeftRadius: "10px",
               mr: { xs: 0, lg: "-4px" },
               padding: "6px",
-              display: { xs: "none", lg: "block" },
+              display: { xs: "none", md: "block" },
             }}>
             <InputLabel htmlFor="outlined-adornment-password">
               Search:
@@ -175,17 +176,27 @@ const MainPage = () => {
                 ))}
               </TextField>
             </Box>
+            <Button
+              sx={{
+                bgcolor: "#F0F0F0",
+                color: "#959595",
+                ":hover": { bgcolor: "white" },
+                border: "1px solid #F0F0F0",
+              }}>
+              <TuneIcon sx={{ fontSize: "15px", mt: "-3px", ml: 1 }} />
+              Advanced Filter
+            </Button>
           </Box>
           <MainMap />
         </Stack>
         {/* text */}
-        <Stack>
+        <Stack maxWidth="md">
           <Stack
             direction="row"
             justifyContent="space-between"
             alignItems="center"
             mt={1}
-            width={{ lg: 850, sm: 600, md: 600 }}>
+            maxWidth={{ lg: "md", md: "md" }}>
             <Stack direction="row" alignItems="center">
               Your search is displaying:
               <Typography color="#4699D5" fontSize={15} ml="3px" mt="2px">
@@ -195,8 +206,6 @@ const MainPage = () => {
             <Button
               alignItems="center"
               textAlign="center"
-              width="40%"
-              mx="0.5rem"
               borderRadius="5px"
               py="1px"
               mb={2}
@@ -217,7 +226,7 @@ const MainPage = () => {
           </Typography>
         </Stack>
         <CardPage />
-      </Container>
+      </Box>
       <MainPageBottomNav />
     </Box>
   );

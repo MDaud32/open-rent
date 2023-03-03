@@ -18,7 +18,7 @@ function Map() {
     <Box
       sx={{
         height: "380px",
-        width: "650px",
+        width: "700px",
         border: "3px solid #DFDFDF",
         borderRadius: "10px",
         // display: { xs: "none", md: "block" },

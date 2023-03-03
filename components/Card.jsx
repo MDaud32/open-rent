@@ -14,12 +14,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const CardPage = () => {
   return (
-    <Box sx={{ bgcolor: { md: "red", ipadLandscape: "yellow" } }}>
+    <Box sx={{}}>
       {data.map((card) => (
         <Box
           key={card.id}
           sx={{
-            maxWidth: { xs: "100%", sm: "100%", md: "100%" },
+            maxWidth: { xs: "100%", sm: "md", md: "md" },
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             mb: 2,
@@ -35,7 +35,13 @@ const CardPage = () => {
                 sx={{
                   height: 200,
                   display: "block",
-                  maxWidth: { xs: "100%", sm: 400, ipadLandscape: 300 },
+                  maxWidth: {
+                    xs: "100%",
+                    sm: 400,
+                    md: 400,
+                    lg: 400,
+                    ipadLandscape: 400,
+                  },
                   objectFit: "cover",
                   overflow: "hidden",
                   width: "100%",
@@ -52,7 +58,7 @@ const CardPage = () => {
                 flexDirection: { xs: "column", sm: "row" },
               }}>
               <CardContent>
-                <Box width={{ xs: "100%", sm: 500, md: "100%" }}>
+                <Box>
                   <Stack direction="row" justifyContent="space-between">
                     {/* rent and location */}
                     <Stack

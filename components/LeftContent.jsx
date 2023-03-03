@@ -6,6 +6,7 @@ import {
   IconButton,
   Stack,
   Typography,
+  Modal,
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -15,11 +16,11 @@ import Features from "./Features";
 import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 import dynamic from "next/dynamic";
 import OverView from "./OverView";
-import CarouselPage from "./Carousel";
-import Carousel from "react-material-ui-carousel";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { Paper } from "@mui/material";
+
+import { Carousel } from "react-responsive-carousel";
 
 const items = [
   {
@@ -34,6 +35,9 @@ const items = [
 
 const Map = dynamic(() => import("./Map"), { ssr: false });
 const LeftContent = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <Box>
       {/* <Image
@@ -49,10 +53,11 @@ const LeftContent = () => {
         autoPlay={false}
         animation="fade"
         indicators={false}
+        onClickItem={handleOpen}
         navButtonsAlwaysVisible={true}>
         {items.map((item) => (
           // <Item key={item.id} item={item} />
-          <Paper key={item.id} sx={{ bgcolor: "#F5F5F5" }}>
+          <Paper key={item.id} sx={{ bgcolor: "#F5F5F5", cursor: "pointer" }}>
             <CardMedia
               component="img"
               sx={{
@@ -66,6 +71,43 @@ const LeftContent = () => {
           </Paper>
         ))}
       </Carousel>
+      <Box>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description">
+          <Box
+            sx={{
+              borderRadius: "5px",
+              position: "absolute",
+              top: { xs: "80%", sm: "55%", md: "45%", lg: "35%" },
+              left: "50%",
+              width: { xs: "100%", sm: "100%", md: "90%", lg: "90%" },
+              height: { xs: "100%", sm: "100%", md: "90%", lg: "90%" },
+              transform: "translate(-50%, -50%)",
+              bgcolor: "transparent",
+            }}>
+            <Carousel
+              PrevIcon={<NavigateBeforeIcon />}
+              onClickItem={handleOpen}>
+              {items.map((item) => (
+                // <Item key={item.id} item={item} />
+                <CardMedia
+                  key={item.id}
+                  component="img"
+                  sx={{
+                    width: { xs: "100%", sm: "100%" },
+                    borderRadius: "5px",
+                  }}
+                  image={item.image}
+                  alt="green iguana"
+                />
+              ))}
+            </Carousel>
+          </Box>
+        </Modal>
+      </Box>
       <Typography
         component="h1"
         sx={{
@@ -125,11 +167,9 @@ const LeftContent = () => {
           </Typography>
           <Typography sx={{ fontSize: "15px" }}>per week</Typography>
           <Typography sx={{ fontSize: "15px", mt: "0.5rem" }}>
-            ✔️ No admin fees
+            ✔ No admin fees
           </Typography>
-          <Typography sx={{ fontSize: "15px" }}>
-            ✔️ No hidden charges
-          </Typography>
+          <Typography sx={{ fontSize: "15px" }}>✔ No hidden charges</Typography>
         </Stack>
       </Stack>
       <Box>

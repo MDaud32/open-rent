@@ -22,6 +22,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
+import dayjs, { Dayjs } from "dayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+
 function valuetext(value) {
   return `${value}`;
 }
@@ -30,6 +35,11 @@ export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const [age, setAge] = React.useState("");
   const [value, setValue] = React.useState([1, 8]);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const [selectedValue, setSelectedValue] = React.useState("");
+  const [selectedSubValue, setSelectedSubValue] = React.useState("");
+  const [isValue, setIsValue] = React.useState(dayjs("2014-08-18T21:11:54"));
 
   const handleChangeSilder = (event, newValue) => {
     setValue(newValue);
@@ -38,10 +48,10 @@ export default function BasicModal() {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const [selectedValue, setSelectedValue] = React.useState("");
-  const [selectedSubValue, setSelectedSubValue] = React.useState("");
+
+  const handleChangeDate = (newValue) => {
+    setIsValue(newValue);
+  };
 
   const handleValueChange = (event) => {
     setSelectedValue(event.target.value);
@@ -205,21 +215,23 @@ export default function BasicModal() {
             <Box>
               <Typography fontSize={20}>Move in Date Options:</Typography>
               {/* input 3rd */}
-              <FormControl sx={{ m: 1, width: 270 }}>
-                <Typography fontWeight={600}>Move In Before</Typography>
-                <TextField
-                  id="select"
-                  label={"select"}
-                  select
-                  placeholder="select"
-                  size="small"
-                  value={selectedValue}
-                  onChange={handleValueChange}>
-                  <MenuItem value="option1">Option 1</MenuItem>
-                  <MenuItem value="option2">Option 2</MenuItem>
-                  <MenuItem value="option3">Option 3</MenuItem>
-                </TextField>
-              </FormControl>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <Stack spacing={3}>
+                  <DesktopDatePicker
+                    label="Date desktop"
+                    inputFormat="MM/DD/YYYY"
+                    value={isValue}
+                    onChange={handleChangeDate}
+                    renderInput={(params) => (
+                      <TextField
+                        size="small"
+                        sx={{ m: 1, width: 270 }}
+                        {...params}
+                      />
+                    )}
+                  />
+                </Stack>
+              </LocalizationProvider>
               {/* input 4th */}
               <FormControl sx={{ m: 1, width: 270 }}>
                 <Typography fontWeight={600}>Fixed Term:</Typography>

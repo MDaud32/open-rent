@@ -21,6 +21,11 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import dayjs, { Dayjs } from "dayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+
+import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
 const style = {};
 
@@ -32,6 +37,11 @@ export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const [age, setAge] = React.useState("");
   const [value, setValue] = React.useState([1, 8]);
+  const [isValue, setIsValue] = React.useState(dayjs("2014-08-18T21:11:54"));
+
+  const handleChangeDate = (newValue) => {
+    setIsValue(newValue);
+  };
 
   const handleChangeSilder = (event, newValue) => {
     setValue(newValue);
@@ -311,21 +321,23 @@ export default function BasicModal() {
           </FormControl>
           <Typography>Move in Date Options:</Typography>
           {/* input 3rd */}
-          <FormControl sx={{ m: 1, width: 300 }}>
-            <Typography>Move In Before</Typography>
-            <TextField
-              id="select"
-              label={"select"}
-              select
-              placeholder="select"
-              size="small"
-              value={selectedValue}
-              onChange={handleValueChange}>
-              <MenuItem value="option1">Option 1</MenuItem>
-              <MenuItem value="option2">Option 2</MenuItem>
-              <MenuItem value="option3">Option 3</MenuItem>
-            </TextField>
-          </FormControl>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <Stack>
+              <MobileDatePicker
+                label="Date mobile"
+                inputFormat="MM/DD/YYYY"
+                value={isValue}
+                onChange={handleChangeDate}
+                renderInput={(params) => (
+                  <TextField
+                    size="small"
+                    sx={{ m: 1, width: 300 }}
+                    {...params}
+                  />
+                )}
+              />
+            </Stack>
+          </LocalizationProvider>
           {/* input 4th */}
           <FormControl sx={{ m: 1, width: 300 }}>
             <Typography>Fixed Term:</Typography>

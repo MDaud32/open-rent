@@ -26,18 +26,18 @@ const CardPage = () => {
             backgroundColor: "#ffffff",
             boxShadow: "1px 1px 1px 1px #eaeaea",
           }}>
-          <Carousel showIndicators={false} showThumbs={false}>
+          {/* <Carousel showIndicators={false} showThumbs={false}>
             {items.map((itemImg) => (
               <Paper key={itemImg.id}>
                 <CardMedia
                   image={itemImg.image}
                   component="img"
                   height={"200"}
-                  sx={{ width: { xs: "100%", sm: "30%" } }}
+                  sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
                 />
               </Paper>
             ))}
-          </Carousel>
+          </Carousel> */}
           <Link href="/DetailPage" underline="none" key={card.id}>
             <CardActionArea
               sx={{

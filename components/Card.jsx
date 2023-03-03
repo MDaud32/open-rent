@@ -34,10 +34,10 @@ const CardPage = () => {
                 sx={{
                   height: 200,
                   display: "block",
-                  maxWidth: { xs: "50%", sm: "200" },
+                  maxWidth: { xs: "100%", sm: "400" },
                   objectFit: "cover",
                   overflow: "hidden",
-                  width: "50%",
+                  width: "100%",
                 }}
                 src={itemImg.image}
                 key={itemImg.id}
@@ -51,7 +51,7 @@ const CardPage = () => {
                 flexDirection: { xs: "column", sm: "row" },
               }}>
               <CardContent>
-                <Box>
+                <Box width={{ xs: "100%", sm: 500, md: "100%" }}>
                   <Stack direction="row" justifyContent="space-between">
                     {/* rent and location */}
                     <Stack

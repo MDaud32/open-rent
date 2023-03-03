@@ -11,17 +11,10 @@ import { Carousel } from "react-responsive-carousel";
 
 import { Paper } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 
 const CardPage = () => {
-  const theme = useTheme();
-  console.log(theme.breakpoints.up("ipadLandscape"));
-
-  const isIpadLandscape = useMediaQuery(theme.breakpoints.up("ipadLandscape"));
-  console.log(isIpadLandscape);
-
   return (
-    <Box sx={{ bgcolor: { md: "red", ipadlandscape: "green" } }}>
+    <Box sx={{ bgcolor: { md: "red", ipadLandscape: "yellow" } }}>
       {data.map((card) => (
         <Box
           key={card.id}
@@ -42,7 +35,7 @@ const CardPage = () => {
                 sx={{
                   height: 200,
                   display: "block",
-                  maxWidth: { xs: "100%", sm: "400" },
+                  maxWidth: { xs: "100%", sm: 400, ipadLandscape: 300 },
                   objectFit: "cover",
                   overflow: "hidden",
                   width: "100%",

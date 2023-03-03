@@ -34,10 +34,10 @@ const CardPage = () => {
                 sx={{
                   height: 200,
                   display: "block",
-                  maxWidth: { xs: "100%", sm: "400" },
+                  maxWidth: { xs: "50%", sm: "200" },
                   objectFit: "cover",
                   overflow: "hidden",
-                  width: "100%",
+                  width: "50%",
                 }}
                 src={itemImg.image}
                 key={itemImg.id}

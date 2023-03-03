@@ -84,10 +84,10 @@ const LeftContent = () => {
               top: { xs: "80%", sm: "55%", md: "45%", lg: "35%" },
               left: "50%",
               width: { xs: "100%", sm: "100%", md: "90%", lg: "90%" },
-              height: { xs: "30%", sm: "50%", md: "80%", lg: "90%" },
+              height: "auto",
               transform: "translate(-50%, -50%)",
               bgcolor: "transparent",
-              mt: { xs: "-12rem", sm: "-6rem", md: "0" },
+              mt: { xs: "-18rem", sm: "0px", lg: "10rem" },
             }}>
             <Carousel
               PrevIcon={<NavigateBeforeIcon />}

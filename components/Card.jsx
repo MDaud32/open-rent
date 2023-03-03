@@ -18,7 +18,7 @@ const CardPage = () => {
         <Box
           key={card.id}
           sx={{
-            maxWidth: { xs: "100%", sm: "md", md: "md" },
+            maxWidth: { xs: "100%", sm: "100%", md: "100%" },
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             mb: 2,
@@ -26,18 +26,25 @@ const CardPage = () => {
             backgroundColor: "#ffffff",
             boxShadow: "1px 1px 1px 1px #eaeaea",
           }}>
-          {/* <Carousel showIndicators={false} showThumbs={false}>
+          <Carousel showIndicators={false} showThumbs={false}>
             {items.map((itemImg) => (
-              <Paper key={itemImg.id}>
-                <CardMedia
-                  image={itemImg.image}
-                  component="img"
-                  height={"200"}
-                  sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
-                />
-              </Paper>
+              // eslint-disable-next-line react/jsx-key
+              <Box
+                component="img"
+                sx={{
+                  height: 200,
+                  display: "block",
+                  maxWidth: { xs: "100%", sm: "400" },
+                  objectFit: "cover",
+                  overflow: "hidden",
+                  width: "100%",
+                }}
+                src={itemImg.image}
+                key={itemImg.id}
+                alt={"haha"}
+              />
             ))}
-          </Carousel> */}
+          </Carousel>
           <Link href="/DetailPage" underline="none" key={card.id}>
             <CardActionArea
               sx={{

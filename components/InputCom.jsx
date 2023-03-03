@@ -25,7 +25,7 @@ const InputCom = () => {
           borderBottomLeftRadius: "10px",
           mr: { xs: 0, lg: "-4px" },
           padding: "6px",
-          display: { xs: "none", md: "block" },
+          display: { xs: "none", sm: "block" },
         }}>
         <InputLabel htmlFor="outlined-adornment-password">Search:</InputLabel>
         {/* input */}

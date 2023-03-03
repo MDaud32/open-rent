@@ -9,8 +9,6 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Carousel } from "react-responsive-carousel";
 
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { Paper } from "@mui/material";
 
 const CardPage = () => {
@@ -20,7 +18,7 @@ const CardPage = () => {
         <Box
           key={card.id}
           sx={{
-            maxWidth: { xs: "100%", sm: "md" },
+            maxWidth: { xs: "100%", sm: "md", md: "md" },
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             mb: 2,
@@ -51,7 +49,7 @@ const CardPage = () => {
                     {/* rent and location */}
                     <Stack
                       direction="row"
-                      width={{ xs: "100%", sm: "50%" }}
+                      width={{ xs: "100%", md: "50%" }}
                       justifyContent="space-between"
                       alignItems="center">
                       <Typography
@@ -81,7 +79,7 @@ const CardPage = () => {
                     {/* last update time */}
                     <Box
                       sx={{
-                        display: { xs: "none", sm: "block" },
+                        display: { xs: "none", md: "block" },
                         alignItems: "center",
                       }}>
                       <Typography fontSize="12px" mt="8px" alignItems="center">
@@ -125,7 +123,7 @@ const CardPage = () => {
                         bgcolor: "#5CB85C",
                         ":hover": { bgcolor: "#5CA05C" },
                         color: "white",
-                        display: { xs: "none", sm: "block" },
+                        display: { xs: "none", md: "block" },
                       }}>
                       View Details
                     </Typography>

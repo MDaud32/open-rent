@@ -70,6 +70,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description">
         <Box
           sx={{
+            borderRadius: "5px",
             position: "absolute",
             overflow: "auto",
             top: "50%",

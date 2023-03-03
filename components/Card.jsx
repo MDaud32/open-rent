@@ -33,7 +33,7 @@ const CardPage = () => {
                   image={itemImg.image}
                   component="img"
                   height={"200"}
-                  sx={{ width: { xs: "100%", sm: "30%" }, mr: "auto" }}
+                  sx={{ width: { xs: "100%", sm: "30%" } }}
                 />
               </Paper>
             ))}

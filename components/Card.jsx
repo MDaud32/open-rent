@@ -40,7 +40,7 @@ const CardPage = () => {
                     sm: 400,
                     md: 400,
                     lg: 400,
-                    ipadLandscape: 450,
+                    ipadLandscape: 460,
                   },
                   objectFit: "cover",
                   overflow: "hidden",

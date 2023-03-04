@@ -66,7 +66,11 @@ const MainPage = () => {
         {/* text */}
         <Stack maxWidth="md">
           <Stack
-            direction={{ xs: "column-reverse", md: "row" }}
+            direction={{
+              xs: "column-reverse",
+              ipadLandscape: "column-reverse",
+              md: "row",
+            }}
             justifyContent="space-between"
             alignItems={{ xs: "center", sm: "start" }}
             mt={1}
@@ -87,7 +91,7 @@ const MainPage = () => {
                 bgcolor: "#5CB85C",
                 ":hover": { bgcolor: "#5CA05C" },
                 color: "white",
-                display: { xs: "none", sm: "block" },
+                display: { xs: "none", sm: "block", ipadLandscape: "block" },
               }}>
               Create Email Alert
             </Button>

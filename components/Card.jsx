@@ -139,6 +139,7 @@ const CardPage = () => {
                         color: "white",
                         display: {
                           xs: "none",
+                          sm: "none",
                           md: "block",
                           lg: "block",
                           ipadLandscape: "none",

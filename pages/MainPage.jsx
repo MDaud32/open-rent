@@ -40,6 +40,7 @@ const MainPage = () => {
       <Box sx={{ mx: "auto", maxWidth: { md: "md" }, p: 1 }}>
         <Typography
           component="h1"
+          textAlign={{ xs: "center", sm: "start" }}
           sx={{
             fontWeight: 400,
             fontSize: { xs: "15px", sm: "25px" },
@@ -65,9 +66,9 @@ const MainPage = () => {
         {/* text */}
         <Stack maxWidth="md">
           <Stack
-            direction="row"
+            direction={{ xs: "column-reverse", md: "row" }}
             justifyContent="space-between"
-            alignItems="center"
+            alignItems={{ xs: "center", sm: "start" }}
             mt={1}
             maxWidth={{ lg: "md", md: "md" }}>
             <Stack direction="row" alignItems="center">
@@ -86,13 +87,14 @@ const MainPage = () => {
                 bgcolor: "#5CB85C",
                 ":hover": { bgcolor: "#5CA05C" },
                 color: "white",
-                display: { xs: "none", md: "block" },
+                display: { xs: "none", sm: "block" },
               }}>
               Create Email Alert
             </Button>
           </Stack>
           <Typography
             color="gray"
+            textAlign={{ xs: "center", sm: "start" }}
             fontSize={{ xs: "10px", md: "15px" }}
             mb="4px">
             There are 2 new properties since your last visit 4 days ago.

@@ -137,7 +137,12 @@ const CardPage = () => {
                         bgcolor: "#5CB85C",
                         ":hover": { bgcolor: "#5CA05C" },
                         color: "white",
-                        display: { xs: "none", md: "block" },
+                        display: {
+                          xs: "none",
+                          md: "block",
+                          lg: "block",
+                          ipadLandscape: "none",
+                        },
                       }}>
                       View Details
                     </Typography>
